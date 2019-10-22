@@ -1,52 +1,72 @@
 .intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: #01a850;
-}
-.msgbox {
-  color: #363535;
-  font-size: 12pt;
-  max-width: 600px;
-  min-width: 300px;
-  min-height: 20px;
-  text-align: right;
-  padding: 5px 10px;
-  margin: 10px 5px;
-  background: #fffcf9;
-  border-radius: 1em;
-  display: inline-block;
-}
-.msgbox::after {
-  background: url(/vendors/img/felech.png) no-repeat;
-  position: relative;
-  padding: 10px;
-  margin-bottom: -25px;
-  content: " ";
-  display: block;
-}
-.imsg::after {
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
+  padding: 0;
+  width: 80%;
+  /* intro elements */
+  .intro__elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+  }
 
-/* customize */
-.title1,
-.title2 {
-  font-weight: 300;
-  font-size: 32px;
-  margin: 2px auto;
-  font-weight: normal;
-}
-.title2 {
-  font-size: 22px;
-  font-weight: 300;
-}
-.title1 {
-  max-width: 400px;
-  background: linear-gradient(to right, #fcfddc, #f0f961);
-  background: -webkit-linear-gradient(to right, #f0f961, #fcfddc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.drag {
-  font-size: 16px;
-  margin: 10px auto;
+  /* logo */
+  .logo {
+    width: 55%;
+    max-width:230px;
+    
+  }
+  .msgbox {
+    color: #363535;
+    font-size: 12pt;
+    max-width: 600px;
+    min-width: 200px;
+    min-height: 20px;
+    text-align: right;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    background: #fffcf9;
+    border-radius: 1em;
+    display: inline-block;
+  }
+  .msgbox::after {
+    background: url(/vendors/img/felech.png) no-repeat;
+    position: relative;
+    height: 13px;
+    top: 20px;
+    content: " ";
+    display: block;
+  }
+  .imsg::after {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  /* customize */
+  .title1,
+  .title2 {
+    font-weight: 300;
+    font-size: 32px;
+    margin: 2px auto;
+    font-weight: normal;
+  }
+  .title2 {
+    font-size: 22px;
+    font-weight: 300;
+  }
+  .title1 {
+    max-width: 400px;
+    background: linear-gradient(to right, #fcfddc, #f0f961);
+    background: -webkit-linear-gradient(to right, #f0f961, #fcfddc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .drag {
+    font-size: 16px;
+  }
 }

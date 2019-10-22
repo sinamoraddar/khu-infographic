@@ -31,7 +31,7 @@
     padding: 10px 15px;
     margin: 10px 5px;
     background: #fffcf9;
-    border-radius: 1em;
+    border-radius:$messageBoxBorderRadius;
     display: inline-block;
   }
   .msgbox::after {

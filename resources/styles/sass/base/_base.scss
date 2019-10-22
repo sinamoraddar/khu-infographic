@@ -1,0 +1,23 @@
+/*slide template */
+body {
+  direction: rtl;
+  font-family: "Vazir";
+  margin: 0;
+  overflow: hidden;
+  color: #fff;
+}
+
+.snap {
+  scroll-snap-type: x mandatory;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.slide {
+  min-width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+  text-align: center;
+  padding: 5vh;
+}

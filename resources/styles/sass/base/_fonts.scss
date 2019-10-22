@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One");
+
+@font-face {
+  font-family: Vazir;
+  src: url("/resources/fonts/Vazir.eot");
+  src: url("/resources/fonts/Vazir.eot?#iefix") format("embedded-opentype"),
+    url("/resources/fonts/Vazir.woff") format("woff"),
+    url("/resources/fonts/Vazir.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("/resources/fonts/Vazir-Bold.eot");
+  src: url("/resources/fonts/Vazir-Bold.eot?#iefix") format("embedded-opentype"),
+    url("/resources/fonts/Vazir-Bold.woff") format("woff"),
+    url("/resources/fonts/Vazir-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("/resources/fonts/Vazir-Light.eot");
+  src: url("/resources/fonts/Vazir-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("/resources/fonts/Vazir-Light.woff") format("woff"),
+    url("/resources/fonts/Vazir-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+div,
+h1,
+h2,
+h3,
+p,
+span {
+  font-family: "Vazir";
+  font-weight: normal;
+}

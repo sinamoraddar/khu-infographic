@@ -1,4 +1,3 @@
-/* font data */
 @import url("https://fonts.googleapis.com/css?family=Fredoka+One");
 @font-face {
   font-family: Vazir;
@@ -18,7 +17,12 @@
   src: url("/resources/fonts/Vazir-Light.eot?#iefix") format("embedded-opentype"), url("/resources/fonts/Vazir-Light.woff") format("woff"), url("/resources/fonts/Vazir-Light.ttf") format("truetype");
   font-weight: 300;
 }
-div, h1, h2, h3, p, span {
+div,
+h1,
+h2,
+h3,
+p,
+span {
   font-family: "Vazir";
   font-weight: normal;
 }
@@ -47,32 +51,10 @@ body {
   padding: 5vh;
 }
 
-.slide1 {
+.intro {
   background: #01a850;
 }
 
-.slide2 {
-  background: mediumslateblue;
-}
-
-.slide3 {
-  background: coral;
-}
-
-.slide4 {
-  background: dodgerblue;
-}
-
-.slide5 {
-  background: lightgreen;
-}
-
-.slide6 {
-  background: hotpink;
-}
-
-/* end slide template */
-/*messege box template */
 .msgbox {
   color: #363535;
   font-size: 12pt;
@@ -102,7 +84,8 @@ body {
 }
 
 /* customize */
-.title1, .title2 {
+.title1,
+.title2 {
   font-weight: 300;
   font-size: 32px;
   margin: 2px auto;
@@ -126,5 +109,28 @@ body {
   font-size: 16px;
   margin: 10px auto;
 }
+
+.internetInfo {
+  background: mediumslateblue;
+}
+
+.universityEmail {
+  background: coral;
+}
+
+.softwareBank {
+  background: dodgerblue;
+}
+
+.golestan {
+  background: lightgreen;
+}
+
+.library {
+  background: hotpink;
+}
+
+/* end slide template */
+/*messege box template */
 
 /*# sourceMappingURL=main.css.map */

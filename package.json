@@ -1,0 +1,23 @@
+{
+  "name": "khu-introduction-infographic",
+  "version": "1.0.0",
+  "description": "an introduction for kharazmi university",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch resources/styles/sass/main.scss:resources/styles/css/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/sinamoraddar/khu-introduction-infographic.git"
+  },
+  "author": "sinamoraddar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/sinamoraddar/khu-introduction-infographic/issues"
+  },
+  "homepage": "https://gitlab.com/sinamoraddar/khu-introduction-infographic#readme",
+  "dependencies": {
+    "sass": "^1.23.0"
+  }
+}

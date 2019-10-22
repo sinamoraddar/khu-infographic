@@ -1,0 +1,130 @@
+/* font data */
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One");
+@font-face {
+  font-family: Vazir;
+  src: url("/resources/fonts/Vazir.eot");
+  src: url("/resources/fonts/Vazir.eot?#iefix") format("embedded-opentype"), url("/resources/fonts/Vazir.woff") format("woff"), url("/resources/fonts/Vazir.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: Vazir;
+  src: url("/resources/fonts/Vazir-Bold.eot");
+  src: url("/resources/fonts/Vazir-Bold.eot?#iefix") format("embedded-opentype"), url("/resources/fonts/Vazir-Bold.woff") format("woff"), url("/resources/fonts/Vazir-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: Vazir;
+  src: url("/resources/fonts/Vazir-Light.eot");
+  src: url("/resources/fonts/Vazir-Light.eot?#iefix") format("embedded-opentype"), url("/resources/fonts/Vazir-Light.woff") format("woff"), url("/resources/fonts/Vazir-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+div, h1, h2, h3, p, span {
+  font-family: "Vazir";
+  font-weight: normal;
+}
+
+/*slide template */
+body {
+  direction: rtl;
+  font-family: "Vazir";
+  margin: 0;
+  overflow: hidden;
+  color: #fff;
+}
+
+.snap {
+  scroll-snap-type: x mandatory;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.slide {
+  min-width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+  text-align: center;
+  padding: 5vh;
+}
+
+.slide1 {
+  background: #01a850;
+}
+
+.slide2 {
+  background: mediumslateblue;
+}
+
+.slide3 {
+  background: coral;
+}
+
+.slide4 {
+  background: dodgerblue;
+}
+
+.slide5 {
+  background: lightgreen;
+}
+
+.slide6 {
+  background: hotpink;
+}
+
+/* end slide template */
+/*messege box template */
+.msgbox {
+  color: #363535;
+  font-size: 12pt;
+  max-width: 600px;
+  min-width: 300px;
+  min-height: 20px;
+  text-align: right;
+  padding: 5px 10px;
+  margin: 10px 5px;
+  background: #fffcf9;
+  border-radius: 1em;
+  display: inline-block;
+}
+
+.msgbox::after {
+  background: url(/vendors/img/felech.png) no-repeat;
+  position: relative;
+  padding: 10px;
+  margin-bottom: -25px;
+  content: " ";
+  display: block;
+}
+
+.imsg::after {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+/* customize */
+.title1, .title2 {
+  font-weight: 300;
+  font-size: 32px;
+  margin: 2px auto;
+  font-weight: normal;
+}
+
+.title2 {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.title1 {
+  max-width: 400px;
+  background: linear-gradient(to right, #fcfddc, #f0f961);
+  background: -webkit-linear-gradient(to right, #f0f961, #fcfddc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.drag {
+  font-size: 16px;
+  margin: 10px auto;
+}
+
+/*# sourceMappingURL=main.css.map */

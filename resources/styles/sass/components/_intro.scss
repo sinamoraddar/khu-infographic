@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 80%;
   }
 
@@ -35,7 +35,7 @@
     display: inline-block;
   }
   .msgbox::after {
-    background: url(/vendors/img/felech.png) no-repeat;
+    background: url(/vendors/img/intro/felech.png) no-repeat;
     position: relative;
     height: 13px;
     top: 20px;

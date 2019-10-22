@@ -1,28 +1,28 @@
 /* font data */
 @font-face {
     font-family: Vazir;
-    src: url('./fonts/Vazir.eot');
-    src: url('./fonts/Vazir.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/Vazir.woff') format('woff'),
-         url('./fonts/Vazir.ttf') format('truetype');
+    src: url('/assets/fonts/Vazir.eot');
+    src: url('/assets/fonts/Vazir.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/Vazir.woff') format('woff'),
+         url('/assets/fonts/Vazir.ttf') format('truetype');
     font-weight: normal;
   }
         
   @font-face {
     font-family: Vazir;
-    src: url('./fonts/Vazir-Bold.eot');
-    src: url('./fonts/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/Vazir-Bold.woff') format('woff'),
-         url('./fonts/Vazir-Bold.ttf') format('truetype');
+    src: url('/assets/fonts/Vazir-Bold.eot');
+    src: url('/assets/fonts/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/Vazir-Bold.woff') format('woff'),
+         url('/assets/fonts/Vazir-Bold.ttf') format('truetype');
     font-weight: bold;
   }
   
   @font-face {
     font-family: Vazir;
-    src: url('./fonts/Vazir-Light.eot');
-    src: url('./fonts/Vazir-Light.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/Vazir-Light.woff') format('woff'),
-         url('./fonts/Vazir-Light.ttf') format('truetype');
+    src: url('/assets/fonts/Vazir-Light.eot');
+    src: url('/assets/fonts/Vazir-Light.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/Vazir-Light.woff') format('woff'),
+         url('/assets/fonts/Vazir-Light.ttf') format('truetype');
     font-weight: 300;
   }
   div,h1,h2,h3,p,span {
@@ -92,7 +92,7 @@ body {
     display:inline-block;
 }
 .msgbox::after{
-    background: url(./img/felech.png) no-repeat;
+    background: url(/vendors/img/felech.png) no-repeat;
     position: relative;
     padding: 10px;
     margin-bottom: -25px;

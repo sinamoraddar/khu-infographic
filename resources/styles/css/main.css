@@ -39,6 +39,8 @@ body {
 }
 
 .snap {
+  min-height: 650px;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   display: flex;
   overflow-x: scroll;
@@ -54,6 +56,7 @@ body {
 }
 
 .msgbox {
+  float: left;
   color: #363535;
   font-size: 12pt;
   max-width: 600px;
@@ -74,6 +77,10 @@ body {
   top: 20px;
   content: " ";
   display: block;
+}
+
+.imsg {
+  float: right;
 }
 
 .imsg::after {
@@ -131,13 +138,60 @@ body {
   font-size: 16px;
 }
 
-.internetInfo, .snap {
+.internetInfo {
   background: #fadb0b;
 }
-
-.netitem {
-  width: 150px;
-  max-width: 33.3%;
+.internetInfo .netgb {
+  margin: 0 auto;
+}
+.internetInfo .netgb .netitem {
+  width: 30%;
+  max-width: 150px;
+}
+.internetInfo img.wifi {
+  max-width: 20%;
+  width: 120px;
+  display: inline;
+  margin-left: 1em;
+}
+.internetInfo div.wifitext {
+  max-width: 80%;
+  display: inline-block;
+}
+.internetInfo div.wifitext h1 {
+  font-weight: bold;
+  margin-bottom: 0;
+  max-width: 400px;
+  background: linear-gradient(to right, #23418b, #e7028c);
+  background: -webkit-linear-gradient(to right, #23418b, #e7028c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.internetInfo div.wifitext h2 {
+  margin-top: 0;
+  color: #1438cc;
+}
+.internetInfo .chat {
+  max-height: 300px;
+  width: 80%;
+  min-width: 200px;
+  overflow: scroll;
+}
+.internetInfo .scroll1::-webkit-scrollbar {
+  width: 5px;
+}
+.internetInfo .scroll1::-webkit-scrollbar-track {
+  background: #ddd;
+}
+.internetInfo .scroll1::-webkit-scrollbar-thumb {
+  background: #666;
+}
+.internetInfo .scroll {
+  max-width: 100%;
+  width: 500px;
+  height: 300px;
+  overflow: auto;
+  margin: 0 auto;
 }
 
 .universityEmail {

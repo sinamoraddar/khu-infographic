@@ -8,6 +8,8 @@ body {
 }
 
 .snap {
+  min-height: 650px;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   display: flex;
   overflow-x: scroll;
@@ -23,6 +25,7 @@ body {
 }
 
 .msgbox {
+  float:left;
   color: #363535;
   font-size: 12pt;
   max-width: 600px;
@@ -42,6 +45,9 @@ body {
   top: 20px;
   content: " ";
   display: block;
+}
+.imsg{
+  float:right;
 }
 .imsg::after {
   -webkit-transform: scaleX(-1);

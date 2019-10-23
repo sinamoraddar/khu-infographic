@@ -53,6 +53,34 @@ body {
   padding: 2rem 2rem;
 }
 
+.msgbox {
+  color: #363535;
+  font-size: 12pt;
+  max-width: 600px;
+  min-width: 200px;
+  min-height: 20px;
+  text-align: right;
+  padding: 10px 15px;
+  margin: 10px 5px;
+  background: #fffcf9;
+  border-radius: 1em;
+  display: inline-block;
+}
+
+.msgbox::after {
+  background: url(/vendors/img/intro/felech.png) no-repeat;
+  position: relative;
+  height: 13px;
+  top: 20px;
+  content: " ";
+  display: block;
+}
+
+.imsg::after {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
 /* test class for testing purposes only */
 .test {
   background-color: black;
@@ -81,31 +109,6 @@ body {
   width: 55%;
   max-width: 230px;
 }
-.intro .msgbox {
-  color: #363535;
-  font-size: 12pt;
-  max-width: 600px;
-  min-width: 200px;
-  min-height: 20px;
-  text-align: right;
-  padding: 10px 15px;
-  margin: 10px 5px;
-  background: #fffcf9;
-  border-radius: 1em;
-  display: inline-block;
-}
-.intro .msgbox::after {
-  background: url(/vendors/img/intro/felech.png) no-repeat;
-  position: relative;
-  height: 13px;
-  top: 20px;
-  content: " ";
-  display: block;
-}
-.intro .imsg::after {
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
 .intro .title1,
 .intro .title2 {
   font-weight: 300;
@@ -128,8 +131,13 @@ body {
   font-size: 16px;
 }
 
-.internetInfo {
+.internetInfo, .snap {
   background: #fadb0b;
+}
+
+.netitem {
+  width: 150px;
+  max-width: 33.3%;
 }
 
 .universityEmail {

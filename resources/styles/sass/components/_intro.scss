@@ -21,31 +21,6 @@
     max-width:230px;
     
   }
-  .msgbox {
-    color: #363535;
-    font-size: 12pt;
-    max-width: 600px;
-    min-width: 200px;
-    min-height: 20px;
-    text-align: right;
-    padding: 10px 15px;
-    margin: 10px 5px;
-    background: #fffcf9;
-    border-radius:$messageBoxBorderRadius;
-    display: inline-block;
-  }
-  .msgbox::after {
-    background: url(/vendors/img/intro/felech.png) no-repeat;
-    position: relative;
-    height: 13px;
-    top: 20px;
-    content: " ";
-    display: block;
-  }
-  .imsg::after {
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-  }
 
   /* customize */
   .title1,

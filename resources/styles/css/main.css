@@ -30,29 +30,82 @@ span {
 /* colors */
 /* border radius */
 /*slide template */
+* {
+  box-sizing: border-box;
+}
+
 body {
   direction: rtl;
   font-family: "Vazir";
-  margin: 0;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
   color: #fff;
 }
 
-.snap {
-  min-height: 650px;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  display: flex;
-  overflow-x: scroll;
+.slider-Wrapper {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
-.slide {
-  min-width: 100vw;
-  height: 100vh;
-  scroll-snap-align: start;
-  position: relative;
-  text-align: center;
-  padding: 2rem 2rem;
+.slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  z-index: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  -webkit-transition: -webkit-transform 1000ms;
+  transition: -webkit-transform 1000ms, transform 1000ms;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.slider:nth-child(1) {
+  left: 0%;
+}
+.slider:nth-child(2) {
+  left: -100%;
+}
+.slider:nth-child(3) {
+  left: -200%;
+}
+.slider:nth-child(4) {
+  left: -300%;
+}
+.slider:nth-child(5) {
+  left: -400%;
+}
+.slider:nth-child(6) {
+  left: -500%;
+}
+.slider:nth-child(7) {
+  left: -600%;
+}
+.slider:nth-child(8) {
+  left: -700%;
+}
+.slider:nth-child(9) {
+  left: -800%;
+}
+.slider:nth-child(10) {
+  left: -900%;
+}
+.slider:nth-child(11) {
+  left: -1000%;
 }
 
 .msgbox {
@@ -93,6 +146,15 @@ body {
   background-color: black;
 }
 
+/* pagination's styling */
+.pagination {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  left: 200px;
+  z-index: 1;
+}
+
 .intro {
   display: flex;
   flex-direction: column;
@@ -100,7 +162,7 @@ body {
   justify-content: center;
   background: #01a850;
   padding: 0;
-  width: 80%;
+  transform: translateX(0);
   /* intro elements */
   /* logo */
   /* customize */

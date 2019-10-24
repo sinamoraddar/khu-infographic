@@ -1,32 +1,37 @@
 (function($) {
   let activeSlide = 1;
   let totalSlides = $(".slider").length;
-  console.log(totalSlides);
-  $("#goLeft").click(() => {
-    console.log("leftButton--before", activeSlide);
-    var viewPortWidth = $(window).width();
-    console.log(viewPortWidth);
-    if (activeSlide < totalSlides) {
-      $(".slider").css("transform", `translateX(+${activeSlide * 100}%)`);
-      activeSlide++;
+  // sliding functionality
+  const slide = position => {
+    //assign a number to the position variable based on the value of
+    // the arrow icon
+    if (position === "right") {
+      position = parseInt(activeSlide) - 1;
+    } else if (position === "left") {
+      position = parseInt(activeSlide) + 1;
     }
-    console.log("leftButton--after", activeSlide);
+    //only do the slide effect if it's in the total page range
+    if (position > 0 && position <= totalSlides) {
+      $(".slider").css("transform", `translateX(+${(position - 1) * 100}%)`);
+      activeSlide = position;
+    }
+  };
+  //pagination buttons' click event
+  $(".pagination__button").click(function() {
+    slide($(this).val());
   });
-  $("#goRight").click(() => {
-    console.log("rightButton--before", activeSlide);
-    var viewPortWidth = $(window).width();
-    console.log(viewPortWidth);
-    $(".slider").css("transform", `translateX(-${(activeSlide - 2) * 100}%)`);
-    if (activeSlide > 1) {
-      activeSlide--;
+  //arrow key event handler
+  $(document).keydown(function(e) {
+    switch (e.key) {
+      case "ArrowLeft": {
+        slide("left");
+        break;
+      }
+      case "ArrowRight": {
+        slide('right');
+        break;
+      }
+      default:
     }
-    console.log("rightButton--after", activeSlide);
   });
 })(jQuery);
-
-/* visible->selected
-    enter-right class
-    enter-left class
-    leave-right class
-    leave-left class
-*/

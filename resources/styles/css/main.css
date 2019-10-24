@@ -151,6 +151,7 @@ body {
   position: fixed;
   bottom: 0;
   display: flex;
+  flex-direction: row;
   left: 200px;
   z-index: 1;
 }
@@ -257,19 +258,39 @@ body {
 }
 
 .universityEmail {
-  background: coral;
+  background: #4a4a4a;
 }
 
 .softwareBank {
-  background: dodgerblue;
+  background: #ececec;
 }
 
 .golestan {
-  background: lightgreen;
+  background: #23ddbb;
 }
 
 .library {
-  background: hotpink;
+  background: #112256;
+}
+
+.mealAutomation {
+  background: #f00038;
+}
+
+.dormitory {
+  background: #ffc600;
+}
+
+.physicalEducation {
+  background: #2862a3;
+}
+
+.studentLoan {
+  background: #d10e8e;
+}
+
+.footer {
+  background: #ececec;
 }
 
 /* end slide template */

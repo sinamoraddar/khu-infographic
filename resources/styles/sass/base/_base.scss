@@ -10,62 +10,28 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  color: #fff;
 }
 
 .slider-Wrapper {
   display: block;
-  // background: #FFF;
   overflow: hidden;
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  // min-height: 650px;
-  // overflow-y: hidden;
-  // scroll-snap-type: x mandatory;
-  // display: flex;
-  // overflow-x: scroll;
-  // min-height: 100vh;
-  // min-width: 100vw;
-  // transform: rotate(90deg);
-  // overflow: scroll;
-  // display: flex;
-  // flex-direction: row;
-  // transition: transform 0.3s ease-in-out;
 }
 
 .slider {
-  // display: flex;
-  // justify-content: flex-start;
-  // transform: translateX(-100vw);
-  // transition: transform 0.3s ease-in-out;
-
-  // min-width: 100vw;
-  // min-height: 100%;
-  // scroll-snap-align: start;
-  // position: relative;
-  // text-align: center;
-  // padding: 2rem 2rem;
-  width: 100%;
-  height: 100%;
+  overflow-y: scroll;
   position: absolute;
   left: 0;
   top: 0;
-  opacity: 1;
-  z-index: 0;
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  -webkit-transition: -webkit-transform 1000ms;
-  transition: -webkit-transform 1000ms, transform 1000ms;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-
+  width: 100%;
+  height: 100%;
+  transition: transform 1.3s ease;
+  //we use sass' for loop to add a left postition to each slide
+  //based on its number
   @for $i from 1 through 11 {
     &:nth-child(#{$i}) {
       left: ($i - 1) * -100%;
@@ -113,7 +79,7 @@ body {
   position: fixed;
   bottom: 0;
   display: flex;
-flex-direction: row;
+  flex-direction: row;
   left: 200px;
   z-index: 1;
 }

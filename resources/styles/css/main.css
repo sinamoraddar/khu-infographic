@@ -42,7 +42,6 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  color: #fff;
 }
 
 .slider-Wrapper {
@@ -56,23 +55,13 @@ body {
 }
 
 .slider {
-  width: 100%;
-  height: 100%;
+  overflow-y: scroll;
   position: absolute;
   left: 0;
   top: 0;
-  opacity: 1;
-  z-index: 0;
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  -webkit-transition: -webkit-transform 1000ms;
-  transition: -webkit-transform 1000ms, transform 1000ms;
-  -webkit-transform: scale(1);
-  transform: scale(1);
+  width: 100%;
+  height: 100%;
+  transition: transform 1.3s ease;
 }
 .slider:nth-child(1) {
   left: 0%;
@@ -238,23 +227,6 @@ body {
   max-height: 300px;
   width: 80%;
   min-width: 200px;
-  overflow: scroll;
-}
-.internetInfo .scroll1::-webkit-scrollbar {
-  width: 5px;
-}
-.internetInfo .scroll1::-webkit-scrollbar-track {
-  background: #ddd;
-}
-.internetInfo .scroll1::-webkit-scrollbar-thumb {
-  background: #666;
-}
-.internetInfo .scroll {
-  max-width: 100%;
-  width: 500px;
-  height: 300px;
-  overflow: auto;
-  margin: 0 auto;
 }
 
 .universityEmail {

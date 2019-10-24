@@ -37,25 +37,25 @@ h2 {
   max-height:300px;
   width:80%;
   min-width:200px;
-  overflow: scroll;
+  // overflow: scroll;
 }
 
-.scroll1::-webkit-scrollbar {
-  width: 5px;
-}
+// .scroll1::-webkit-scrollbar {
+//   width: 5px;
+// }
  
-.scroll1::-webkit-scrollbar-track {
-  background: #ddd;
-}
+// .scroll1::-webkit-scrollbar-track {
+//   background: #ddd;
+// }
  
-.scroll1::-webkit-scrollbar-thumb {
-  background: #666; 
-}
-.scroll { 
-  max-width: 100%;
-  width: 500px;
-  height: 300px;
-  overflow: auto;
-  margin: 0 auto;
-}
+// .scroll1::-webkit-scrollbar-thumb {
+//   background: #666; 
+// }
+// .scroll { 
+//   max-width: 100%;
+//   width: 500px;
+//   height: 300px;
+//   overflow: auto;
+//   margin: 0 auto;
+// }
 }

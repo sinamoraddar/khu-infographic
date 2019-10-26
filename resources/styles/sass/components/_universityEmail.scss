@@ -1,4 +1,37 @@
 
 .universityEmail {
-    background: coral;
+    background: $emailBackground;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .email{
+      position: relative;
+      display: flex;
+    }
+    .email::before {
+      display: block;
+      background: url(/vendors/img/email/hat.png) no-repeat;
+      position: absolute;
+      top: -50px;
+      right: 0px;
+      content: " ";
+      width: 207px;
+      height: 114px;
+    }
+    .emailtext{
+      position: relative;
+      display: flex;
+      width:100px;
+      h2{
+        font-weight: bold;
+        color:#fefefe;
+        text-align: center;
+      }
+    }
+    .message{
+      a {
+        @include a-color($emailBackground);
+      }
+    }
   }

@@ -230,7 +230,7 @@ div.message::after {
 @media screen and (min-width: 700px) {
   .internetInfo {
     grid-template-columns: 30% 30% 30%;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 }
 .internetInfo .internetPackages {
@@ -264,15 +264,15 @@ div.message::after {
   }
   .internetInfo .internetPackages .internetPackages__item--bachelors {
     width: 75%;
-    max-width: 110px;
+    max-width: 120px;
   }
   .internetInfo .internetPackages .internetPackages__item--masters {
     width: 85%;
-    max-width: 125px;
+    max-width: 135px;
   }
   .internetInfo .internetPackages .internetPackages__item--phd {
     width: 95%;
-    max-width: 135px;
+    max-width: 145px;
   }
 }
 .internetInfo .wifi {
@@ -322,6 +322,7 @@ div.message::after {
   }
   .internetInfo .wifi .wifi__logo {
     width: 100%;
+    max-width: 125px;
   }
 }
 .internetInfo .chat {
@@ -338,15 +339,9 @@ div.message::after {
   flex-direction: column;
 }
 .internetInfo .chat #changePasswordLink a {
-  color: inherit;
   text-decoration: none;
   color: #ceb404;
   font-weight: 500;
-}
-@media screen and (min-width: 700px) {
-  .internetInfo .chat #changePasswordLink a {
-    max-width: unset;
-  }
 }
 @media screen and (hover: hover) {
   .internetInfo .chat #changePasswordLink a:hover {

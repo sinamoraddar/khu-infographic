@@ -7,7 +7,7 @@
   padding: 1em 0;
   @media screen and(min-width:700px) {
     grid-template-columns: 30% 30% 30%;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   .internetPackages {
     display: flex;
@@ -37,16 +37,16 @@
       }
       .internetPackages__item--bachelors {
         width: 75%;
-        max-width: 110px;
+        max-width: 120px;
       }
       .internetPackages__item--masters {
         width: 85%;
 
-        max-width: 125px;
+        max-width: 135px;
       }
       .internetPackages__item--phd {
         width: 95%;
-        max-width: 135px;
+        max-width: 145px;
       }
     }
   }
@@ -96,6 +96,7 @@
 
       .wifi__logo {
         width: 100%;
+        max-width: 125px;
       }
     }
   }
@@ -113,18 +114,7 @@
     #changePasswordLink {
       flex-direction: column;
       a {
-        color: inherit;
-        text-decoration: none;
-        color: darken($internetBackground, 10%);
-        font-weight: 500;
-        @media screen and(min-width:700px){
-          max-width: unset;
-        }
-        @media screen and(hover:hover) {
-          &:hover {
-            color: darken($internetBackground, 20%);
-          }
-        }
+      @include linkStyleGenerator($internetBackground);
       }
     }
   }

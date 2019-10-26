@@ -1,0 +1,10 @@
+@mixin linkStyleGenerator($color) {
+  text-decoration: none;
+  color: darken($color, 10%);
+  font-weight: 500;
+  @media screen and(hover:hover) {
+    &:hover {
+      color: darken($color, 20%);
+    }
+  }
+}

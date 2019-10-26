@@ -16,8 +16,8 @@
       activeSlide = position;
     }
   };
-  //pagination buttons' click event
-  $(".pagination__button").click(function() {
+  //pagination buttons' and intro__goLeft's click events
+  $(".pagination__button , .intro__goLeft").click(function() {
     slide($(this).val());
   });
   //arrow key's event handler
@@ -28,7 +28,7 @@
         break;
       }
       case "ArrowRight": {
-        slide('right');
+        slide("right");
         break;
       }
       default:

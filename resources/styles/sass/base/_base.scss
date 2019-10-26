@@ -104,3 +104,20 @@ div.message::after {
   left: 200px;
   z-index: 1;
 }
+.chat a{
+  flex-direction: column;
+  text-decoration: none;
+  @media screen and(min-width:700px){
+    max-width: unset;
+  }
+  font-weight: 500;
+}
+
+@mixin a-color($input-color) {
+  color: darken($input-color, 10%);
+  @media screen and(hover:hover) {
+    &:hover {
+      color: darken($input-color, 20%);
+    }
+  }
+}

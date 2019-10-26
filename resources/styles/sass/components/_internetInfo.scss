@@ -112,19 +112,8 @@
     
     #changePasswordLink {
       flex-direction: column;
-      a {
-        color: inherit;
-        text-decoration: none;
-        color: darken($internetBackground, 10%);
-        font-weight: 500;
-        @media screen and(min-width:700px){
-          max-width: unset;
-        }
-        @media screen and(hover:hover) {
-          &:hover {
-            color: darken($internetBackground, 20%);
-          }
-        }
+      a{
+        @include a-color($internetBackground);
       }
     }
   }

@@ -162,6 +162,17 @@ div.message::after {
   z-index: 1;
 }
 
+.chat a {
+  flex-direction: column;
+  text-decoration: none;
+  font-weight: 500;
+}
+@media screen and (min-width: 700px) {
+  .chat a {
+    max-width: unset;
+  }
+}
+
 .intro {
   display: flex;
   flex-direction: column;
@@ -357,6 +368,42 @@ div.message::after {
 
 .universityEmail {
   background: #4a4a4a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.universityEmail .email {
+  position: relative;
+  display: flex;
+}
+.universityEmail .email::before {
+  display: block;
+  background: url(/vendors/img/email/hat.png) no-repeat;
+  position: absolute;
+  top: -50px;
+  right: 0px;
+  content: " ";
+  width: 207px;
+  height: 114px;
+}
+.universityEmail .emailtext {
+  position: relative;
+  display: flex;
+  width: 100px;
+}
+.universityEmail .emailtext h2 {
+  font-weight: bold;
+  color: #fefefe;
+  text-align: center;
+}
+.universityEmail .message a {
+  color: #313131;
+}
+@media screen and (hover: hover) {
+  .universityEmail .message a:hover {
+    color: #171717;
+  }
 }
 
 .softwareBank {

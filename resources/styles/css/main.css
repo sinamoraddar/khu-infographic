@@ -233,6 +233,11 @@ div.message::after {
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 900px) {
+  .internetInfo {
+    justify-content: center;
+  }
+}
 .internetInfo .internetPackages {
   display: flex;
   flex-direction: row;
@@ -334,6 +339,7 @@ div.message::after {
   align-items: flex-end;
   justify-content: center;
   max-width: 365px;
+  margin-bottom: 1em;
 }
 .internetInfo .chat #changePasswordLink {
   flex-direction: column;

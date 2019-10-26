@@ -9,6 +9,9 @@
     grid-template-columns: 30% 30% 30%;
     justify-content: space-between;
   }
+  @media screen and(min-width:900px) {
+  justify-content: center;
+  }
   .internetPackages {
     display: flex;
     flex-direction: row;
@@ -110,7 +113,7 @@
     align-items: flex-end;
     justify-content: center;
     max-width: 365px;
-    
+    margin-bottom: 1em;
     #changePasswordLink {
       flex-direction: column;
       a {

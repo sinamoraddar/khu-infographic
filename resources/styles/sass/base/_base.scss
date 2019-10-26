@@ -11,7 +11,7 @@ body {
   padding: 0;
   margin: 0;
 }
-
+//slider's styilng
 .slider-Wrapper {
   display: block;
   overflow: hidden;
@@ -23,7 +23,7 @@ body {
 }
 
 .slider {
-  overflow-y: scroll;
+  overflow: hidden auto;
   position: absolute;
   left: 0;
   top: 0;
@@ -39,27 +39,40 @@ body {
   }
 }
 
+//message's styling
 .msgbox {
-  float: left;
+  display: flex;
+  align-items: center;
   color: #363535;
-  font-size: 12pt;
+  font-size: 13px;
   max-width: 600px;
-  min-width: 200px;
-  min-height: 20px;
-  text-align: right;
+  min-width: 241px;
+  min-height: 40px;
+  width: 85%;
+  /* text-align: right; */
   padding: 10px 15px;
   margin: 10px 5px;
   background: #fffcf9;
-  border-radius: $messageBoxBorderRadius;
-  display: inline-block;
+  border-radius: 1em;
+  /* display: inline-block;*/
+  @media screen and(min-width:470px) {
+    font-size: 14px;
+    max-width: 340px;
+  }
+
 }
 .msgbox::after {
-  background: url(/vendors/img/intro/felech.png) no-repeat;
+  display: block;
+
+  background: url(/vendors/img/intro/felech.svg) no-repeat;
   position: relative;
   height: 13px;
-  top: 20px;
+  width: 54px;
+  top: 50px;
   content: " ";
-  display: block;
+  @media screen and(min-width:470px) {
+    top: 51px;
+  }
 }
 .imsg {
   float: right;

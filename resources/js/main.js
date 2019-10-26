@@ -10,7 +10,7 @@
     } else if (position === "left") {
       position = parseInt(activeSlide) + 1;
     }
-    //only do the slide effect if it's in the total page range
+    //only do the slide effect if it's in the total slides range
     if (position > 0 && position <= totalSlides) {
       $(".slider").css("transform", `translateX(+${(position - 1) * 100}%)`);
       activeSlide = position;
@@ -20,7 +20,7 @@
   $(".pagination__button").click(function() {
     slide($(this).val());
   });
-  //arrow key event handler
+  //arrow key's event handler
   $(document).keydown(function(e) {
     switch (e.key) {
       case "ArrowLeft": {

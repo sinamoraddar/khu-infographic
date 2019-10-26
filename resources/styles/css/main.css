@@ -55,7 +55,7 @@ body {
 }
 
 .slider {
-  overflow-y: scroll;
+  overflow: hidden auto;
   position: absolute;
   left: 0;
   top: 0;
@@ -98,27 +98,41 @@ body {
 }
 
 .msgbox {
-  float: left;
+  display: flex;
+  align-items: center;
   color: #363535;
-  font-size: 12pt;
+  font-size: 13px;
   max-width: 600px;
-  min-width: 200px;
-  min-height: 20px;
-  text-align: right;
+  min-width: 241px;
+  min-height: 40px;
+  width: 85%;
+  /* text-align: right; */
   padding: 10px 15px;
   margin: 10px 5px;
   background: #fffcf9;
   border-radius: 1em;
-  display: inline-block;
+  /* display: inline-block;*/
+}
+@media screen and (min-width: 470px) {
+  .msgbox {
+    font-size: 14px;
+    max-width: 340px;
+  }
 }
 
 .msgbox::after {
-  background: url(/vendors/img/intro/felech.png) no-repeat;
+  display: block;
+  background: url(/vendors/img/intro/felech.svg) no-repeat;
   position: relative;
   height: 13px;
-  top: 20px;
+  width: 54px;
+  top: 50px;
   content: " ";
-  display: block;
+}
+@media screen and (min-width: 470px) {
+  .msgbox::after {
+    top: 51px;
+  }
 }
 
 .imsg {
@@ -170,17 +184,16 @@ body {
 }
 .intro .title1,
 .intro .title2 {
-  font-weight: 300;
-  font-size: 32px;
-  margin: 2px auto;
-  font-weight: normal;
+  margin: 2px 0;
+  text-align: center;
 }
 .intro .title2 {
-  font-size: 22px;
-  font-weight: 300;
+  font-size: 20px;
+  font-weight: 400;
 }
 .intro .title1 {
-  max-width: 400px;
+  font-size: 25px;
+  font-weight: 600;
   background: linear-gradient(to right, #fcfddc, #f0f961);
   background: -webkit-linear-gradient(to right, #f0f961, #fcfddc);
   -webkit-background-clip: text;

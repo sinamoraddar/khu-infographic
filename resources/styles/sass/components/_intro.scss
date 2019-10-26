@@ -19,28 +19,30 @@
   /* logo */
   .logo {
     width: 55%;
-    max-width:230px;
-    
+    max-width: 230px;
   }
 
   /* customize */
   .title1,
   .title2 {
-    font-weight: 300;
-    font-size: 32px;
-    margin: 2px auto;
-    font-weight: normal;
+    margin: 2px 0;
+    text-align: center;
   }
   .title2 {
-    font-size: 22px;
-    font-weight: 300;
+    font-size: 20px;
+    font-weight: 400;
   }
   .title1 {
-    max-width: 400px;
+    font-size: 25px;
+    font-weight: 600;
+    // max-width: 400px;
     background: linear-gradient(to right, #fcfddc, #f0f961);
     background: -webkit-linear-gradient(to right, #f0f961, #fcfddc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    // @media screen and (min-width:{
+      
+    // }
   }
   .drag {
     font-size: 16px;

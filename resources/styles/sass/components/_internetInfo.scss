@@ -10,7 +10,7 @@
     justify-content: space-between;
   }
   @media screen and(min-width:900px) {
-  justify-content: center;
+    justify-content: center;
   }
   .internetPackages {
     display: flex;
@@ -103,7 +103,6 @@
       }
     }
   }
-
   .chat {
     width: 90%;
     min-width: 200px;
@@ -117,7 +116,7 @@
     #changePasswordLink {
       flex-direction: column;
       a {
-      @include linkStyleGenerator($internetBackground);
+        @include linkStyleGenerator($internetBackground);
       }
     }
   }

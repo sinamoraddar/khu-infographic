@@ -1,3 +1,48 @@
 .studentLoan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
   background: $studentLoanBackground;
+  @media screen and(min-width:700px) {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .studentLoan__header {
+    * {
+      text-align: center;
+    }
+    p {
+      color: white;
+      max-width: 340px;
+    }
+    h1 {
+      font-size: 1.7em;
+      span {
+        font-family: Rezvan, sans-serif;
+        font-size: 1.6em;
+      }
+      font-family: Rezvan, sans-serif;
+
+      color: $studentLoanHeader;
+    }
+    @media screen and(min-width:700px) {
+      position: relative;
+      top: -48px;
+      margin-left: 2.5rem;
+      * {
+        text-align: right;
+      }
+    }
+  }
+  .message {
+    a {
+      @include linkStyleGenerator(lighten($studentLoanBackground, 20%));
+    }
+    @media screen and(min-width:700px) {
+      margin-left: 0;
+      max-width: 350px;
+    }
+  }
 }

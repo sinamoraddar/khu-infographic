@@ -172,7 +172,7 @@ div.message::after {
   z-index: 1;
 }
 
-.universityEmail .chat {
+.physicalEducation .physicalEducation__intro .chat, .universityEmail .chat {
   width: 90%;
   min-width: 200px;
   justify-self: center;
@@ -466,6 +466,89 @@ div.message::after {
 
 .physicalEducation {
   background: #2862a3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+@media screen and (min-width: 710px) {
+  .physicalEducation {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.physicalEducation .physicalEducation__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.physicalEducation .physicalEducation__intro h1 {
+  font-family: Rezvan, sans-serif;
+  text-align: center;
+  color: white;
+}
+.physicalEducation .physicalEducation__intro .chat {
+  width: 100%;
+}
+@media screen and (min-width: 710px) {
+  .physicalEducation .physicalEducation__intro {
+    margin-left: 2.5rem;
+    align-items: flex-start;
+  }
+  .physicalEducation .physicalEducation__intro h1 {
+    font-size: 2.3rem;
+  }
+}
+.physicalEducation .physicalEducation__features * {
+  font-size: 1.1rem;
+  color: white;
+  font-family: Rezvan, sans-serif;
+}
+@media screen and (min-width: 710px) {
+  .physicalEducation .physicalEducation__features {
+    font-size: 1.4rem;
+  }
+}
+.physicalEducation .physicalEducation__features .physicalEducation__featureItem {
+  margin-bottom: 15px;
+}
+.physicalEducation .physicalEducation__features .physicalEducation__featureItem .physicalEducation__featureItem__title {
+  color: #ffc600;
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 710px) {
+  .physicalEducation .physicalEducation__features .physicalEducation__featureItem .physicalEducation__featureItem__title {
+    font-size: 1.8rem;
+  }
+}
+.physicalEducation .physicalEducation__features .physicalEducation__featureItem:last-of-type {
+  display: flex;
+  justify-content: flex-start;
+}
+.physicalEducation .physicalEducation__features .physicalEducation__featureItem:last-of-type .physicalEducation__featureItem--seperator {
+  width: 50%;
+}
+.physicalEducation .physicalEducation__features .physicalEducation__featureItem:last-of-type .physicalEducation__featureItem--seperator:nth-child(1) {
+  border-left: 6px solid white;
+}
+.physicalEducation .physicalEducation__features .physicalEducation__featureItem:last-of-type .physicalEducation__featureItem--seperator:nth-child(2) {
+  position: relative;
+  top: 10px;
+  margin-right: 4%;
+}
+.physicalEducation .physicalEducation__features .physicalEducation__featureItem:last-of-type .physicalEducation__featureItem--seperator:nth-child(2) p:first-of-type {
+  margin-top: 0;
+}
+@media screen and (min-width: 365px) {
+  .physicalEducation .physicalEducation__features .physicalEducation__featureItem:last-of-type .physicalEducation__featureItem--seperator:nth-child(2) {
+    margin-right: 6%;
+  }
+}
+@media screen and (min-width: 365px) {
+  .physicalEducation .physicalEducation__features .physicalEducation__featureItem:last-of-type .physicalEducation__featureItem--seperator {
+    width: 45%;
+  }
 }
 
 .studentLoan {

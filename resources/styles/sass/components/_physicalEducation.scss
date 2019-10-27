@@ -1,3 +1,82 @@
-.physicalEducation{
-    background: $physicalEducationBackground;
+.physicalEducation {
+  background: $physicalEducationBackground;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  @media screen and(min-width:710px) {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .physicalEducation__intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      font-family: Rezvan, sans-serif;
+      text-align: center;
+      color: white;
+    }
+    .chat {
+      @extend %chatBox;
+      width: 100%;
+    }
+    @media screen and(min-width:710px) {
+      margin-left: 2.5rem;
+      align-items: flex-start;
+      h1 {
+        font-size: 2.3rem;
+      }
+    }
+  }
+  .physicalEducation__features {
+    * {
+      font-size: 1.1rem;
+      color: white;
+      font-family: Rezvan, sans-serif;
+    }
+    @media screen and(min-width:710px) {
+      font-size: 1.4rem;
+      position: relative;
+      top: 45px;
+    }
+
+    .physicalEducation__featureItem {
+      margin-bottom: 15px;
+      .physicalEducation__featureItem__title {
+        color: $dormitoryBackground;
+        font-size: 1.6rem;
+        @media screen and(min-width:710px) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+    .physicalEducation__featureItem:last-of-type {
+      display: flex;
+      //   flex-direction: row;
+      justify-content: flex-start;
+      .physicalEducation__featureItem--seperator {
+        width: 50%;
+
+        &:nth-child(1) {
+          border-left: 6px solid white;
+        }
+        &:nth-child(2) {
+          position: relative;
+          top: 14px;
+          margin-right: 4%;
+          p:first-of-type {
+            margin-top: 0;
+          }
+          @media screen and(min-width:365px) {
+            margin-right: 6%;
+          }
+        }
+        @media screen and(min-width:365px) {
+          width: 45%;
+        }
+      }
+    }
+  }
 }

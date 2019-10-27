@@ -17,6 +17,10 @@
   src: url("/resources/fonts/Vazir-Light.eot?#iefix") format("embedded-opentype"), url("/resources/fonts/Vazir-Light.woff") format("woff"), url("/resources/fonts/Vazir-Light.ttf") format("truetype");
   font-weight: 300;
 }
+@font-face {
+  font-family: Rezvan;
+  src: url("/resources/fonts/aRezvan-Fat.ttf") format("truetype");
+}
 div,
 h1,
 h2,
@@ -465,7 +469,60 @@ div.message::after {
 }
 
 .studentLoan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
   background: #d10e8e;
+}
+@media screen and (min-width: 700px) {
+  .studentLoan {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.studentLoan .studentLoan__header * {
+  text-align: center;
+}
+.studentLoan .studentLoan__header p {
+  color: white;
+  max-width: 340px;
+}
+.studentLoan .studentLoan__header h1 {
+  font-size: 1.7em;
+  font-family: Rezvan, sans-serif;
+  color: #fdff65;
+}
+.studentLoan .studentLoan__header h1 span {
+  font-family: Rezvan, sans-serif;
+  font-size: 1.6em;
+}
+@media screen and (min-width: 700px) {
+  .studentLoan .studentLoan__header {
+    position: relative;
+    top: -48px;
+    margin-left: 2.5rem;
+  }
+  .studentLoan .studentLoan__header * {
+    text-align: right;
+  }
+}
+.studentLoan .message a {
+  text-decoration: none;
+  color: #f022a9;
+  font-weight: 500;
+}
+@media screen and (hover: hover) {
+  .studentLoan .message a:hover {
+    color: #b90c7e;
+  }
+}
+@media screen and (min-width: 700px) {
+  .studentLoan .message {
+    margin-left: 0;
+    max-width: 350px;
+  }
 }
 
 .footer {

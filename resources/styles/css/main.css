@@ -508,6 +508,8 @@ div.message::after {
 @media screen and (min-width: 710px) {
   .physicalEducation .physicalEducation__features {
     font-size: 1.4rem;
+    position: relative;
+    top: 45px;
   }
 }
 .physicalEducation .physicalEducation__features .physicalEducation__featureItem {
@@ -534,7 +536,7 @@ div.message::after {
 }
 .physicalEducation .physicalEducation__features .physicalEducation__featureItem:last-of-type .physicalEducation__featureItem--seperator:nth-child(2) {
   position: relative;
-  top: 10px;
+  top: 14px;
   margin-right: 4%;
 }
 .physicalEducation .physicalEducation__features .physicalEducation__featureItem:last-of-type .physicalEducation__featureItem--seperator:nth-child(2) p:first-of-type {

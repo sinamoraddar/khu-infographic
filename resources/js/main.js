@@ -23,6 +23,7 @@
   //arrow key's event handler
   $(document).keydown(function(e) {
     switch (e.key) {
+      case " ":/* space bar's event */
       case "ArrowLeft": {
         slide("left");
         break;

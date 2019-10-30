@@ -620,9 +620,14 @@ div.message::after {
 }
 .physicalEducation .container .physicalEducation__features .physicalEducation__featureItem .physicalEducation__featureItem__title {
   color: #ffc600;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
-@media screen and (min-width: 710px) {
+@media screen and (min-width: 374px) {
+  .physicalEducation .container .physicalEducation__features .physicalEducation__featureItem .physicalEducation__featureItem__title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 780px) {
   .physicalEducation .container .physicalEducation__features .physicalEducation__featureItem .physicalEducation__featureItem__title {
     font-size: 1.8rem;
   }

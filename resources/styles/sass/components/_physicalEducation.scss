@@ -49,8 +49,11 @@
         margin-bottom: 15px;
         .physicalEducation__featureItem__title {
           color: $dormitoryBackground;
-          font-size: 1.6rem;
-          @media screen and(min-width:710px) {
+          font-size: 1.3rem;
+          @media screen and(min-width:374px) {
+          font-size: 1.5rem;
+          }
+          @media screen and(min-width:780px) {
             font-size: 1.8rem;
           }
         }

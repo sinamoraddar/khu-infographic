@@ -1,117 +1,117 @@
 .library {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background: $libraryBackground;
-  h1 {
-    background: -moz-linear-gradient(
-      top,
-      #ffffff 23%,
-      #f6f6f6 55%,
-      #ffc66c 40%,
-      #ffc66c 100%
-    );
-    background: -webkit-gradient(
-      left top,
-      left bottom,
-      color-stop(23%, #ffffff),
-      color-stop(55%, #f6f6f6),
-      color-stop(40%, #ffc66c),
-      color-stop(100%, #ffc66c)
-    );
-    background: -webkit-linear-gradient(
-      top,
-      #ffffff 23%,
-      #f6f6f6 55%,
-      #ffc66c 40%,
-      #ffc66c 100%
-    );
-    background: -o-linear-gradient(
-      top,
-      #ffffff 23%,
-      #f6f6f6 55%,
-      #ffc66c 40%,
-      #ffc66c 100%
-    );
-    background: -ms-linear-gradient(
-      top,
-      #ffffff 23%,
-      #f6f6f6 55%,
-      #ffc66c 40%,
-      #ffc66c 100%
-    );
-    background: linear-gradient(
-      to bottom,
-      #ffffff 23%,
-      #f6f6f6 55%,
-      #ffc66c 40%,
-      #ffc66c 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    font-family: Rezvan, sans-serif;
-    font-size: 3rem;
-    width: 100%;
-    text-align: center;
-  }
-  .library__container {
+  .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    @media screen and(min-width:700px) {
-      flex-direction: row;
 
+    h1 {
+      background: -moz-linear-gradient(
+        top,
+        #ffffff 23%,
+        #f6f6f6 55%,
+        #ffc66c 40%,
+        #ffc66c 100%
+      );
+      background: -webkit-gradient(
+        left top,
+        left bottom,
+        color-stop(23%, #ffffff),
+        color-stop(55%, #f6f6f6),
+        color-stop(40%, #ffc66c),
+        color-stop(100%, #ffc66c)
+      );
+      background: -webkit-linear-gradient(
+        top,
+        #ffffff 23%,
+        #f6f6f6 55%,
+        #ffc66c 40%,
+        #ffc66c 100%
+      );
+      background: -o-linear-gradient(
+        top,
+        #ffffff 23%,
+        #f6f6f6 55%,
+        #ffc66c 40%,
+        #ffc66c 100%
+      );
+      background: -ms-linear-gradient(
+        top,
+        #ffffff 23%,
+        #f6f6f6 55%,
+        #ffc66c 40%,
+        #ffc66c 100%
+      );
+      background: linear-gradient(
+        to bottom,
+        #ffffff 23%,
+        #f6f6f6 55%,
+        #ffc66c 40%,
+        #ffc66c 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      font-family: Rezvan, sans-serif;
+      font-size: 3rem;
+      width: 100%;
+      text-align: center;
     }
-    .library__url {
+    .library__container {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
       @media screen and(min-width:700px) {
-        margin-left: 25px;
+        flex-direction: row;
       }
-  
-      a {
-        color: white;
-        text-decoration: none;
-        font-size: 0.95rem;
+      .library__url {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        width: auto;
-      }
-      div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        color: $headerYellow;
-        width: 61%;
-        margin-left: 10px;
-       
-    
-        img {
-          width: 50px;
-          margin-left: 14px;
-        }
+        justify-content: space-between;
         @media screen and(min-width:700px) {
-          position: relative;
-          top: -20px;
-          width: 68%;
-          font-size: 1.2rem;
-          img{
-            width: 62px;
+          margin-left: 25px;
+        }
+
+        a {
+          color: white;
+          text-decoration: none;
+          font-size: 0.95rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: auto;
+        }
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+          color: $headerYellow;
+          width: 61%;
+          margin-left: 10px;
+
+          img {
+            width: 50px;
+            margin-left: 14px;
+          }
+          @media screen and(min-width:700px) {
+            position: relative;
+            top: -20px;
+            width: 68%;
+            font-size: 1.2rem;
+            img {
+              width: 62px;
+            }
           }
         }
       }
-      
-    }
-    .message {
-      a {
-        @include linkStyleGenerator(lighten($libraryBackground,60%));
+      .message {
+        a {
+          @include linkStyleGenerator(lighten($libraryBackground, 60%));
+        }
       }
     }
   }

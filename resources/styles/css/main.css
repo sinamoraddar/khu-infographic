@@ -59,7 +59,9 @@ body {
 }
 
 .slider {
-  overflow: hidden auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   position: absolute;
   padding: 1rem 1.5rem;
   left: 0;
@@ -102,13 +104,22 @@ body {
   left: -1000%;
 }
 
+/* we define a container class to 
+enable the min-height abbility
+and also let the slider's overflow y work correctly
+ */
+.container {
+  width: 100%;
+  min-height: 100%;
+}
+
 .message {
   display: flex;
   align-items: center;
   color: #363535;
   font-size: 13px;
   min-width: 241px;
-  min-height: 40px;
+  min-height: 60px;
   width: 85%;
   /* text-align: right; */
   padding: 10px 15px;
@@ -158,22 +169,18 @@ div.message::after {
   align-items: center;
 }
 
-/* test class for testing purposes only */
-.test {
-  background-color: black;
-}
-
 /* pagination's styling */
 .pagination {
   position: fixed;
   bottom: 0;
   display: flex;
   flex-direction: row;
-  left: 200px;
+  justify-content: center;
   z-index: 1;
+  width: 100vw;
 }
 
-.physicalEducation .physicalEducation__intro .chat, .universityEmail .chat {
+.physicalEducation .container .physicalEducation__intro .chat, .universityEmail .container .chat {
   width: 90%;
   min-width: 200px;
   justify-self: center;
@@ -186,38 +193,31 @@ div.message::after {
 }
 
 .intro {
+  background: #01a850;
+}
+.intro .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #01a850;
-  padding: 0;
-  /* intro elements */
   /* logo */
   /* headers */
 }
-.intro .intro__elements {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-}
-.intro .logo {
+.intro .container .logo {
   width: 55%;
   max-width: 230px;
   margin-bottom: 10px;
 }
-.intro .title1,
-.intro .title2 {
+.intro .container .title1,
+.intro .container .title2 {
   margin: 2px 0;
   text-align: center;
 }
-.intro .title2 {
+.intro .container .title2 {
   font-size: 20px;
   font-weight: 400;
 }
-.intro .title1 {
+.intro .container .title1 {
   font-size: 25px;
   font-weight: 600;
   background: linear-gradient(to right, #fcfddc, #f0f961);
@@ -225,7 +225,7 @@ div.message::after {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.intro .intro__goLeft {
+.intro .container .intro__goLeft {
   font-size: 16px;
   font-weight: 600;
   background: none;
@@ -237,94 +237,95 @@ div.message::after {
   transition: transform 0.2s ease-in;
 }
 @media screen and (hover: hover) {
-  .intro .intro__goLeft:hover {
+  .intro .container .intro__goLeft:hover {
     transform: scale(1.1);
   }
 }
 
 .internetInfo {
+  background: #fadb0b;
+}
+.internetInfo .container {
   display: grid;
   grid-template-columns: 95%;
   row-gap: 1.5em;
   justify-content: center;
-  background: #fadb0b;
-  padding: 1em 0;
 }
 @media screen and (min-width: 700px) {
-  .internetInfo {
+  .internetInfo .container {
     grid-template-columns: 30% 30% 30%;
     justify-content: space-between;
   }
 }
 @media screen and (min-width: 900px) {
-  .internetInfo {
+  .internetInfo .container {
     justify-content: center;
   }
 }
-.internetInfo .internetPackages {
+.internetInfo .container .internetPackages {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.internetInfo .internetPackages .internetPackages__item--bachelors {
+.internetInfo .container .internetPackages .internetPackages__item--bachelors {
   width: 25%;
   max-width: 93px;
   margin-right: 1em;
 }
-.internetInfo .internetPackages .internetPackages__item--masters {
+.internetInfo .container .internetPackages .internetPackages__item--masters {
   width: 30%;
   max-width: 112px;
 }
-.internetInfo .internetPackages .internetPackages__item--phd {
+.internetInfo .container .internetPackages .internetPackages__item--phd {
   width: 35%;
   max-width: 131px;
   margin-left: 1em;
 }
 @media screen and (min-width: 700px) {
-  .internetInfo .internetPackages {
+  .internetInfo .container .internetPackages {
     grid-column: 1;
     grid-row: 1;
     flex-direction: column;
   }
-  .internetInfo .internetPackages .internetPackages__item {
+  .internetInfo .container .internetPackages .internetPackages__item {
     margin: 0;
   }
-  .internetInfo .internetPackages .internetPackages__item--bachelors {
+  .internetInfo .container .internetPackages .internetPackages__item--bachelors {
     width: 75%;
     max-width: 120px;
   }
-  .internetInfo .internetPackages .internetPackages__item--masters {
+  .internetInfo .container .internetPackages .internetPackages__item--masters {
     width: 85%;
     max-width: 135px;
   }
-  .internetInfo .internetPackages .internetPackages__item--phd {
+  .internetInfo .container .internetPackages .internetPackages__item--phd {
     width: 95%;
     max-width: 145px;
   }
 }
-.internetInfo .wifi {
+.internetInfo .container .wifi {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-.internetInfo .wifi .wifi__logo {
+.internetInfo .container .wifi .wifi__logo {
   max-width: 95px;
   width: 25%;
   margin-left: 5px;
   display: inline-block;
 }
-.internetInfo .wifi .wifi__text {
+.internetInfo .container .wifi .wifi__text {
   width: 70%;
   max-width: 270px;
   display: inline-block;
 }
-.internetInfo .wifi .wifi__text * {
+.internetInfo .container .wifi .wifi__text * {
   text-align: center;
   margin: 0;
 }
-.internetInfo .wifi .wifi__text h1 {
+.internetInfo .container .wifi .wifi__text h1 {
   font-weight: bold;
   font-size: 25px;
   max-width: 400px;
@@ -333,27 +334,27 @@ div.message::after {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.internetInfo .wifi .wifi__text h2 {
+.internetInfo .container .wifi .wifi__text h2 {
   font-size: 20px;
   color: #1438cc;
 }
 @media screen and (min-width: 500px) {
-  .internetInfo .wifi .wifi__logo {
+  .internetInfo .container .wifi .wifi__logo {
     max-width: 100px;
   }
 }
 @media screen and (min-width: 700px) {
-  .internetInfo .wifi {
+  .internetInfo .container .wifi {
     flex-direction: column;
     grid-column: 3;
     grid-row: 1;
   }
-  .internetInfo .wifi .wifi__logo {
+  .internetInfo .container .wifi .wifi__logo {
     width: 100%;
     max-width: 125px;
   }
 }
-.internetInfo .chat {
+.internetInfo .container .chat {
   width: 90%;
   min-width: 200px;
   justify-self: center;
@@ -364,22 +365,24 @@ div.message::after {
   max-width: 365px;
   margin-bottom: 1em;
 }
-.internetInfo .chat #changePasswordLink {
+.internetInfo .container .chat #changePasswordLink {
   flex-direction: column;
 }
-.internetInfo .chat #changePasswordLink a {
+.internetInfo .container .chat #changePasswordLink a {
   text-decoration: none;
   color: #ceb404;
   font-weight: 500;
 }
 @media screen and (hover: hover) {
-  .internetInfo .chat #changePasswordLink a:hover {
+  .internetInfo .container .chat #changePasswordLink a:hover {
     color: #837203;
   }
 }
 
 .universityEmail {
   background: #4a4a4a;
+}
+.universityEmail .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -388,17 +391,17 @@ div.message::after {
   /* chat box */
 }
 @media screen and (min-width: 700px) {
-  .universityEmail {
+  .universityEmail .container {
     flex-direction: row;
   }
 }
-.universityEmail .email {
+.universityEmail .container .email {
   position: relative;
   display: flex;
   margin-top: 1rem;
   width: 140px;
 }
-.universityEmail .email img[alt=hat] {
+.universityEmail .container .email img[alt=hat] {
   z-index: 1;
   position: absolute;
   top: -30px;
@@ -406,41 +409,41 @@ div.message::after {
   width: 75%;
   height: auto;
 }
-.universityEmail .email img {
+.universityEmail .container .email img {
   width: 100%;
   height: 100%;
 }
 @media screen and (min-width: 700px) {
-  .universityEmail .email {
+  .universityEmail .container .email {
     width: 30%;
     max-width: 235px;
     min-width: 190px;
   }
 }
-.universityEmail .emailtext {
+.universityEmail .container .emailtext {
   position: relative;
   display: flex;
 }
-.universityEmail .emailtext h2 {
+.universityEmail .container .emailtext h2 {
   font-weight: bold;
   color: #fefefe;
   text-align: center;
 }
 @media screen and (min-width: 700px) {
-  .universityEmail .emailtext {
+  .universityEmail .container .emailtext {
     width: 100px;
   }
-  .universityEmail .emailtext h2 {
+  .universityEmail .container .emailtext h2 {
     margin: 0 1.3rem;
   }
 }
-.universityEmail .message a {
+.universityEmail .container .message a {
   text-decoration: none;
   color: #8a8a8a;
   font-weight: 500;
 }
 @media screen and (hover: hover) {
-  .universityEmail .message a:hover {
+  .universityEmail .container .message a:hover {
     color: #646464;
   }
 }
@@ -448,19 +451,27 @@ div.message::after {
 .softwareBank {
   background: #ececec;
 }
+.softwareBank .container {
+  /* put all of the styles here */
+}
 
 .golestan {
   background: #23ddbb;
 }
+.golestan .container {
+  /* put all the styles here */
+}
 
 .library {
+  background: #112256;
+}
+.library .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #112256;
 }
-.library h1 {
+.library .container h1 {
   background: -moz-linear-gradient(top, #ffffff 23%, #f6f6f6 55%, #ffc66c 40%, #ffc66c 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(23%, #ffffff), color-stop(55%, #f6f6f6), color-stop(40%, #ffc66c), color-stop(100%, #ffc66c));
   background: -webkit-linear-gradient(top, #ffffff 23%, #f6f6f6 55%, #ffc66c 40%, #ffc66c 100%);
@@ -475,7 +486,7 @@ div.message::after {
   width: 100%;
   text-align: center;
 }
-.library .library__container {
+.library .container .library__container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -483,20 +494,20 @@ div.message::after {
   width: 100%;
 }
 @media screen and (min-width: 700px) {
-  .library .library__container {
+  .library .container .library__container {
     flex-direction: row;
   }
 }
-.library .library__container .library__url {
+.library .container .library__container .library__url {
   display: flex;
   justify-content: space-between;
 }
 @media screen and (min-width: 700px) {
-  .library .library__container .library__url {
+  .library .container .library__container .library__url {
     margin-left: 25px;
   }
 }
-.library .library__container .library__url a {
+.library .container .library__container .library__url a {
   color: white;
   text-decoration: none;
   font-size: 0.95rem;
@@ -505,7 +516,7 @@ div.message::after {
   justify-content: center;
   width: auto;
 }
-.library .library__container .library__url div {
+.library .container .library__container .library__url div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -514,28 +525,28 @@ div.message::after {
   width: 61%;
   margin-left: 10px;
 }
-.library .library__container .library__url div img {
+.library .container .library__container .library__url div img {
   width: 50px;
   margin-left: 14px;
 }
 @media screen and (min-width: 700px) {
-  .library .library__container .library__url div {
+  .library .container .library__container .library__url div {
     position: relative;
     top: -20px;
     width: 68%;
     font-size: 1.2rem;
   }
-  .library .library__container .library__url div img {
+  .library .container .library__container .library__url div img {
     width: 62px;
   }
 }
-.library .library__container .message a {
+.library .container .library__container .message a {
   text-decoration: none;
   color: #8099e6;
   font-weight: 500;
 }
 @media screen and (hover: hover) {
-  .library .library__container .message a:hover {
+  .library .container .library__container .message a:hover {
     color: #4066d9;
   }
 }
@@ -543,13 +554,21 @@ div.message::after {
 .mealAutomation {
   background: #f00038;
 }
+.mealAutomation .container {
+  /* put all the styles here */
+}
 
 .dormitory {
   background: #ffc600;
 }
+.dormitory .container {
+  /* put all the styles here */
+}
 
 .physicalEducation {
   background: #2862a3;
+}
+.physicalEducation .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -557,138 +576,139 @@ div.message::after {
   padding: 1rem 1.5rem;
 }
 @media screen and (min-width: 710px) {
-  .physicalEducation {
+  .physicalEducation .container {
     flex-direction: row;
     justify-content: center;
   }
 }
-.physicalEducation .physicalEducation__intro {
+.physicalEducation .container .physicalEducation__intro {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.physicalEducation .physicalEducation__intro h1 {
+.physicalEducation .container .physicalEducation__intro h1 {
   font-family: Rezvan, sans-serif;
   text-align: center;
   color: white;
 }
-.physicalEducation .physicalEducation__intro .chat {
+.physicalEducation .container .physicalEducation__intro .chat {
   width: 100%;
 }
 @media screen and (min-width: 710px) {
-  .physicalEducation .physicalEducation__intro {
+  .physicalEducation .container .physicalEducation__intro {
     margin-left: 2.5rem;
     align-items: flex-start;
   }
-  .physicalEducation .physicalEducation__intro h1 {
+  .physicalEducation .container .physicalEducation__intro h1 {
     font-size: 2.3rem;
   }
 }
-.physicalEducation .physicalEducation__features * {
+.physicalEducation .container .physicalEducation__features * {
   font-size: 1.1rem;
   color: white;
   font-family: Rezvan, sans-serif;
 }
 @media screen and (min-width: 710px) {
-  .physicalEducation .physicalEducation__features {
+  .physicalEducation .container .physicalEducation__features {
     font-size: 1.4rem;
     position: relative;
     top: 45px;
   }
 }
-.physicalEducation .physicalEducation__features .physicalEducation__featureItem {
+.physicalEducation .container .physicalEducation__features .physicalEducation__featureItem {
   margin-bottom: 15px;
 }
-.physicalEducation .physicalEducation__features .physicalEducation__featureItem .physicalEducation__featureItem__title {
+.physicalEducation .container .physicalEducation__features .physicalEducation__featureItem .physicalEducation__featureItem__title {
   color: #ffc600;
   font-size: 1.6rem;
 }
 @media screen and (min-width: 710px) {
-  .physicalEducation .physicalEducation__features .physicalEducation__featureItem .physicalEducation__featureItem__title {
+  .physicalEducation .container .physicalEducation__features .physicalEducation__featureItem .physicalEducation__featureItem__title {
     font-size: 1.8rem;
   }
 }
-.physicalEducation .physicalEducation__features .physicalEducation__featureItem:last-of-type {
+.physicalEducation .container .physicalEducation__features .physicalEducation__featureItem:last-of-type {
   display: flex;
   justify-content: flex-start;
 }
-.physicalEducation .physicalEducation__features .physicalEducation__featureItem:last-of-type .physicalEducation__featureItem--seperator {
+.physicalEducation .container .physicalEducation__features .physicalEducation__featureItem:last-of-type .physicalEducation__featureItem--seperator {
   width: 50%;
 }
-.physicalEducation .physicalEducation__features .physicalEducation__featureItem:last-of-type .physicalEducation__featureItem--seperator:nth-child(1) {
+.physicalEducation .container .physicalEducation__features .physicalEducation__featureItem:last-of-type .physicalEducation__featureItem--seperator:nth-child(1) {
   border-left: 6px solid white;
 }
-.physicalEducation .physicalEducation__features .physicalEducation__featureItem:last-of-type .physicalEducation__featureItem--seperator:nth-child(2) {
+.physicalEducation .container .physicalEducation__features .physicalEducation__featureItem:last-of-type .physicalEducation__featureItem--seperator:nth-child(2) {
   position: relative;
   top: 14px;
   margin-right: 4%;
 }
-.physicalEducation .physicalEducation__features .physicalEducation__featureItem:last-of-type .physicalEducation__featureItem--seperator:nth-child(2) p:first-of-type {
+.physicalEducation .container .physicalEducation__features .physicalEducation__featureItem:last-of-type .physicalEducation__featureItem--seperator:nth-child(2) p:first-of-type {
   margin-top: 0;
 }
 @media screen and (min-width: 365px) {
-  .physicalEducation .physicalEducation__features .physicalEducation__featureItem:last-of-type .physicalEducation__featureItem--seperator:nth-child(2) {
+  .physicalEducation .container .physicalEducation__features .physicalEducation__featureItem:last-of-type .physicalEducation__featureItem--seperator:nth-child(2) {
     margin-right: 6%;
   }
 }
 @media screen and (min-width: 365px) {
-  .physicalEducation .physicalEducation__features .physicalEducation__featureItem:last-of-type .physicalEducation__featureItem--seperator {
+  .physicalEducation .container .physicalEducation__features .physicalEducation__featureItem:last-of-type .physicalEducation__featureItem--seperator {
     width: 45%;
   }
 }
 
 .studentLoan {
+  background: #d10e8e;
+}
+.studentLoan .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem 1.5rem;
-  background: #d10e8e;
 }
 @media screen and (min-width: 700px) {
-  .studentLoan {
+  .studentLoan .container {
     flex-direction: row;
     justify-content: center;
   }
 }
-.studentLoan .studentLoan__header * {
+.studentLoan .container .studentLoan__header * {
   text-align: center;
 }
-.studentLoan .studentLoan__header p {
+.studentLoan .container .studentLoan__header p {
   color: white;
   max-width: 340px;
 }
-.studentLoan .studentLoan__header h1 {
+.studentLoan .container .studentLoan__header h1 {
   font-size: 1.7em;
   font-family: Rezvan, sans-serif;
   color: #fdff65;
 }
-.studentLoan .studentLoan__header h1 span {
+.studentLoan .container .studentLoan__header h1 span {
   font-family: Rezvan, sans-serif;
   font-size: 1.6em;
 }
 @media screen and (min-width: 700px) {
-  .studentLoan .studentLoan__header {
+  .studentLoan .container .studentLoan__header {
     position: relative;
     top: -48px;
     margin-left: 2.5rem;
   }
-  .studentLoan .studentLoan__header * {
+  .studentLoan .container .studentLoan__header * {
     text-align: right;
   }
 }
-.studentLoan .message a {
+.studentLoan .container .message a {
   text-decoration: none;
   color: #f022a9;
   font-weight: 500;
 }
 @media screen and (hover: hover) {
-  .studentLoan .message a:hover {
+  .studentLoan .container .message a:hover {
     color: #b90c7e;
   }
 }
 @media screen and (min-width: 700px) {
-  .studentLoan .message {
+  .studentLoan .container .message {
     margin-left: 0;
     max-width: 350px;
   }
@@ -696,6 +716,9 @@ div.message::after {
 
 .footer {
   background: #ececec;
+}
+.footer .container {
+  /* put all the styles here */
 }
 
 /* end slide template */

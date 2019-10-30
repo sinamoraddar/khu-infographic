@@ -23,7 +23,9 @@ body {
 }
 
 .slider {
-  overflow: hidden auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   position: absolute;
   padding: 1rem 1.5rem;
   left: 0;
@@ -39,6 +41,14 @@ body {
     }
   }
 }
+/* we define a container class to 
+enable the min-height abbility
+and also let the slider's overflow y work correctly
+ */
+.container {
+  width: 100%;
+  min-height: 100%;
+}
 
 //message's styling
 .message {
@@ -47,7 +57,7 @@ body {
   color: #363535;
   font-size: 13px;
   min-width: 241px;
-  min-height: 40px;
+  min-height: 60px;
   width: 85%;
   /* text-align: right; */
   padding: 10px 15px;
@@ -65,7 +75,6 @@ body {
     font-size: 15px;
     max-width: 500px;
   }
-
 }
 div.message::after {
   display: block;
@@ -91,16 +100,11 @@ div.message::after {
   right: 20px;
 }
 
-//we align the items verticaly with this class 
-.message--column{
+//we align the items verticaly with this class
+.message--column {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-/* test class for testing purposes only */
-.test {
-  background-color: black;
 }
 
 /* pagination's styling */
@@ -109,6 +113,8 @@ div.message::after {
   bottom: 0;
   display: flex;
   flex-direction: row;
-  left: 200px;
+  justify-content: center;
   z-index: 1;
+  width: 100vw;
+ 
 }

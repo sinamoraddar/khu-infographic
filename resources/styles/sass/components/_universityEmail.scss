@@ -1,70 +1,73 @@
 .universityEmail {
   background: $emailBackground;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  @media screen and (min-width: 700px) {
-    flex-direction: row;
-  }
-  .email {
-    position: relative;
-    display: flex;
-    margin-top: 1rem;
-    width: 140px;
-    // &::before {
-    //   display: block;
-    //   background: url(/vendors/img/email/hat.png) no-repeat;
-    //   position: absolute;
-    //   top: -50px;
-    //   right: 0px;
-    //   content: " ";
-    //   width: 207px;
-    //   height: 114px;
-    // }
-    img[alt="hat"] {
-      z-index: 1;
-      position: absolute;
-      top: -30px;
-      right: 0px;
-      width: 75%;
-      height: auto;
-    }
-    img {
-      width: 100%;
-      height: 100%;
-    }
-    @media screen and (min-width: 700px) {
-      width: 30%;
-      max-width: 235px;
-      min-width: 190px;
-    }
-  }
 
-  .emailtext {
-    position: relative;
+  .container {
     display: flex;
-    h2 {
-      font-weight: bold;
-      color: #fefefe;
-      text-align: center;
-    }
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
     @media screen and (min-width: 700px) {
-      width: 100px;
-      h2 {
-        margin: 0 1.3rem;
+      flex-direction: row;
+    }
+    .email {
+      position: relative;
+      display: flex;
+      margin-top: 1rem;
+      width: 140px;
+      // &::before {
+      //   display: block;
+      //   background: url(/vendors/img/email/hat.png) no-repeat;
+      //   position: absolute;
+      //   top: -50px;
+      //   right: 0px;
+      //   content: " ";
+      //   width: 207px;
+      //   height: 114px;
+      // }
+      img[alt="hat"] {
+        z-index: 1;
+        position: absolute;
+        top: -30px;
+        right: 0px;
+        width: 75%;
+        height: auto;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      @media screen and (min-width: 700px) {
+        width: 30%;
+        max-width: 235px;
+        min-width: 190px;
       }
     }
-  }
-  /* chat box */
-  .chat {
-    //we use a placeholder to share the classes which are used multiple times
-    @extend %chatBox;
-  }
-  .message {
-    a {
-      @include linkStyleGenerator(lighten($emailBackground, 35%));
+
+    .emailtext {
+      position: relative;
+      display: flex;
+      h2 {
+        font-weight: bold;
+        color: #fefefe;
+        text-align: center;
+      }
+      @media screen and (min-width: 700px) {
+        width: 100px;
+        h2 {
+          margin: 0 1.3rem;
+        }
+      }
+    }
+    /* chat box */
+    .chat {
+      //we use a placeholder to share the classes which are used multiple times
+      @extend %chatBox;
+    }
+    .message {
+      a {
+        @include linkStyleGenerator(lighten($emailBackground, 35%));
+      }
     }
   }
 }

@@ -452,7 +452,85 @@ div.message::after {
   background: #ececec;
 }
 .softwareBank .container {
-  /* put all of the styles here */
+  /* put all of the styles here :: joon baba */
+}
+.softwareBank .container .grid {
+  margin: 10px;
+  display: grid;
+  grid: auto/auto;
+  justify-content: center;
+  align-content: center;
+}
+@media screen and (min-width: 1080px) {
+  .softwareBank .container .grid {
+    grid: auto/auto auto auto;
+    margin: 5%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1080px) {
+  .softwareBank .container .grid {
+    grid: auto/auto auto;
+    margin: 5%;
+  }
+}
+.softwareBank .container .grid .message {
+  margin: 1em auto;
+}
+.softwareBank .container .grid .card:hover {
+  transform: rotate(1deg) scale(1.05);
+}
+.softwareBank .container .grid .card {
+  margin: 10px;
+  padding: 1em 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.softwareBank .container .grid .card a {
+  text-decoration: none;
+  color: lightgray;
+  font-weight: 500;
+}
+@media screen and (hover: hover) {
+  .softwareBank .container .grid .card a:hover {
+    color: #acacac;
+  }
+}
+.softwareBank .container .grid .card h1 {
+  font-weight: 500;
+  font-size: 36px;
+  text-align: center;
+  font-family: Rezvan, sans-serif;
+  transition: 0.5s;
+  margin: 10px 0;
+}
+.softwareBank .container .grid .card img {
+  transition: 0.5s;
+  max-width: 100%;
+  display: block;
+  padding: 5px;
+  margin: 0 auto;
+}
+.softwareBank .container .grid .card h1:hover, .softwareBank .container .grid .card img:hover {
+  transform: scale(1.05);
+}
+.softwareBank .container .grid .khu-portal {
+  background-color: #fbffb988;
+}
+.softwareBank .container .grid .khu-portal h1 {
+  color: #535353;
+}
+.softwareBank .container .grid .antivirus {
+  background-color: #f9e1ab88;
+}
+.softwareBank .container .grid .sbank {
+  background-color: #d5d9ff88;
+}
+.softwareBank .container .grid .sbank h1 {
+  color: #010892;
+  font-size: 52px;
+}
+.softwareBank .container .grid .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .golestan {

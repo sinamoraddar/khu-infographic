@@ -3,5 +3,57 @@
 
   .container {
     /* put all the styles here */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+      @include linkStyleGenerator($golestanBackground);
+    }
+    .golestan__header {
+      width: 75%;
+      max-width: 180px;
+    }
+    .golestan__title {
+      margin: 2em 0;
+      color: $titleGray;
+
+      display: grid;
+      grid-template-columns: auto;
+      row-gap: 3em;
+      width: 100%;
+      @media screen and(min-width:374px) {
+        grid-template-columns: auto auto;
+        column-gap: 1em;
+      }
+      figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        figcaption {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-size: 1.2em;
+          // font-weight: bold;
+          a {
+            @include linkStyleGenerator($titleGray);
+          }
+          h2 {
+            color: $titleBrown;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 0.2em 0;
+          }
+          span{
+            font-size: 0.67em;
+          }
+        }
+      }
+    }
+    .chat {
+      @extend %chatBox;
+    }
   }
 }

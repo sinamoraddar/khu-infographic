@@ -180,7 +180,7 @@ div.message::after {
   width: 100vw;
 }
 
-.physicalEducation .container .physicalEducation__intro .chat, .universityEmail .container .chat {
+.physicalEducation .container .physicalEducation__intro .chat, .golestan .container .chat, .universityEmail .container .chat {
   width: 90%;
   min-width: 200px;
   justify-self: center;
@@ -538,8 +538,70 @@ div.message::after {
 }
 .golestan .container {
   /* put all the styles here */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
+.golestan .container a {
+  text-decoration: none;
+  color: #1bb296;
+  font-weight: 500;
+}
+@media screen and (hover: hover) {
+  .golestan .container a:hover {
+    color: #116f5e;
+  }
+}
+.golestan .container .golestan__header {
+  width: 75%;
+  max-width: 180px;
+}
+.golestan .container .golestan__title {
+  margin: 2em 0;
+  color: #515151;
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 3em;
+  width: 100%;
+}
+@media screen and (min-width: 374px) {
+  .golestan .container .golestan__title {
+    grid-template-columns: auto auto;
+    column-gap: 1em;
+  }
+}
+.golestan .container .golestan__title figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.golestan .container .golestan__title figure figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2em;
+}
+.golestan .container .golestan__title figure figcaption a {
+  text-decoration: none;
+  color: #383838;
+  font-weight: 500;
+}
+@media screen and (hover: hover) {
+  .golestan .container .golestan__title figure figcaption a:hover {
+    color: #111111;
+  }
+}
+.golestan .container .golestan__title figure figcaption h2 {
+  color: #654614;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0.2em 0;
+}
+.golestan .container .golestan__title figure figcaption span {
+  font-size: 0.67em;
+}
 .library {
   background: #112256;
 }

@@ -566,7 +566,7 @@ div.message::after {
 }
 @media screen and (min-width: 374px) {
   .golestan .container .golestan__title {
-    grid-template-columns: auto auto;
+    grid-template-columns: 47% 47%;
     column-gap: 1em;
   }
 }
@@ -576,12 +576,24 @@ div.message::after {
   align-items: center;
   justify-content: center;
   margin: 0;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 374px) {
+  .golestan .container .golestan__title figure {
+    justify-content: space-between;
+  }
+}
+.golestan .container .golestan__title figure embed {
+  width: 80px;
+  height: 80px;
 }
 .golestan .container .golestan__title figure figcaption {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 1.2em;
+  height: 50%;
 }
 .golestan .container .golestan__title figure figcaption a {
   text-decoration: none;
@@ -601,6 +613,14 @@ div.message::after {
 }
 .golestan .container .golestan__title figure figcaption span {
   font-size: 0.67em;
+}
+@media screen and (min-width: 374px) {
+  .golestan .container .golestan__title figure figcaption {
+    font-size: 1em;
+  }
+  .golestan .container .golestan__title figure figcaption h2 {
+    font-size: 1.2em;
+  }
 }
 .library {
   background: #112256;

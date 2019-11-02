@@ -22,7 +22,7 @@
       row-gap: 3em;
       width: 100%;
       @media screen and(min-width:374px) {
-        grid-template-columns: auto auto;
+        grid-template-columns: 47% 47%;
         column-gap: 1em;
       }
       figure {
@@ -31,11 +31,22 @@
         align-items: center;
         justify-content: center;
         margin: 0;
+        width: 100% ;
+        height: 100%;
+
+        @media screen and (min-width: 374px) {
+          justify-content: space-between;
+        }
+        embed {
+          width: 80px;
+          height: 80px;
+        }
         figcaption {
           display: flex;
           flex-direction: column;
           align-items: center;
           font-size: 1.2em;
+          height: 50%;
           // font-weight: bold;
           a {
             @include linkStyleGenerator($titleGray);
@@ -46,8 +57,15 @@
             font-weight: bold;
             margin: 0.2em 0;
           }
-          span{
+          span {
             font-size: 0.67em;
+          }
+
+          @media screen and (min-width: 374px) {
+            font-size: 1em;
+            h2{
+              font-size: 1.2em;
+            }
           }
         }
       }

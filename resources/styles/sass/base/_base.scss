@@ -1,5 +1,6 @@
 /*slide template */
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "Vazir";
 }
@@ -32,7 +33,10 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  transition: transform 1.3s ease;
+  -webkit-transition: -webkit-transform 0.1s ease-out;
+  transition: -webkit-transform 0.1s ease-out;
+  transition: transform 0.1s ease-out;
+  transition: transform 0.1s ease-out, -webkit-transform 2s ease-in-out;
   //we use sass' for loop to add a left postition to each slide
   //based on its number
   @for $i from 1 through 11 {
@@ -52,7 +56,11 @@ and also let the slider's overflow y work correctly
 
 //message's styling
 .message {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: #363535;
   font-size: 13px;
@@ -91,6 +99,7 @@ div.message::after {
   }
 }
 .message--right {
+  -ms-flex-item-align: start;
   align-self: flex-start;
 }
 .message--right::after {
@@ -102,8 +111,15 @@ div.message::after {
 
 //we align the items verticaly with this class
 .message--column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -111,10 +127,16 @@ div.message::after {
 .pagination {
   position: fixed;
   bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   z-index: 1;
   width: 100vw;
- 
 }

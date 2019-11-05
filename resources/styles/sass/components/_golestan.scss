@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     a {
       @include linkStyleGenerator($golestanBackground);
     }
@@ -13,65 +14,116 @@
       width: 75%;
       max-width: 180px;
     }
-    .golestan__title {
-      margin: 2em 0;
-      color: $titleGray;
-
-      display: grid;
-      grid-template-columns: auto;
-      row-gap: 3em;
-      width: 100%;
-      @media screen and(min-width:374px) {
-        grid-template-columns: 47% 47%;
-        column-gap: 1em;
+    .golestan__mainElements {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 1em 0;
+      width: 98%;
+      height: 100%;
+      max-width: 530px;
+      @media screen and (min-width: 700px) {
+        max-width: unset;
+        flex-direction: row;
       }
-      figure {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
-        width: 100% ;
-        height: 100%;
+      .golestan__title {
+        margin: 2em 0;
+        color: $titleGray;
 
-        @media screen and (min-width: 374px) {
-          justify-content: space-between;
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 3em;
+        width: 100%;
+        @media screen and(min-width:374px) {
+          grid-template-columns: 47% 47%;
+          column-gap: 1.5em;
         }
-        embed {
-          width: 80px;
-          height: 80px;
+        @media screen and(min-width:425px) {
+          column-gap: 1em;
         }
-        figcaption {
+        @media screen and (min-width: 700px) {
+          grid-template-columns: auto;
+          row-gap: 2.5em;
+          column-gap: unset;
+          margin: 0;
+          width: 50%;
+          max-width: 315px;
+          height: 100%;
+        }
+
+        @media screen and (min-width: 800px) {
+          row-gap: 1.75em;
+        }
+
+        figure {
           display: flex;
           flex-direction: column;
           align-items: center;
-          font-size: 1.2em;
-          height: 50%;
-          // font-weight: bold;
-          a {
-            @include linkStyleGenerator($titleGray);
-          }
-          h2 {
-            color: $titleBrown;
-            font-size: 1.3em;
-            font-weight: bold;
-            margin: 0.2em 0;
-          }
-          span {
-            font-size: 0.67em;
-          }
+          justify-content: center;
+          margin: 0;
+          width: 100%;
+          height: 100%;
 
           @media screen and (min-width: 374px) {
+            justify-content: space-between;
+          }
+          @media screen and (min-width: 700px) {
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+
+          embed {
+            width: 80px;
+            height: 80px;
+            @media screen and (min-width: 700px) {
+              margin-left: 0.9em;
+            }
+          }
+          figcaption {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             font-size: 1em;
-            h2{
-              font-size: 1.2em;
+            height: 50%;
+            // font-weight: bold;
+            @media screen and (min-width: 700px) {
+              // text-align: start;
+              align-items: flex-start;
+              height: 100%;
+            }
+
+            a {
+              @include linkStyleGenerator(darken($golestanBackground, 20%));
+              font-weight: bold;
+            }
+            h2 {
+              color: $titleBrown;
+              font-size: 1.3em;
+              font-weight: bold;
+              margin: 0.2em 0;
+            }
+            span {
+              font-size: 0.67em;
+            }
+
+            @media screen and (min-width: 374px) {
+              font-size: 1em;
+              h2 {
+                font-size: 1.1em;
+              }
             }
           }
         }
       }
-    }
-    .chat {
-      @extend %chatBox;
+      .chat {
+        @extend %chatBox;
+        @media screen and (min-width: 700px) {
+          width: 60%;
+          max-width: 500px;
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }

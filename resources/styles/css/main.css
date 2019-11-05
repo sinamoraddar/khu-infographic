@@ -35,6 +35,7 @@ span {
 /* border radius */
 /*slide template */
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "Vazir";
 }
@@ -68,7 +69,10 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  transition: transform 1.3s ease;
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
 }
 .slider:nth-child(1) {
   left: 0%;
@@ -114,7 +118,11 @@ and also let the slider's overflow y work correctly
 }
 
 .message {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: #363535;
   font-size: 13px;
@@ -153,6 +161,7 @@ div.message::after {
   content: " ";
 }
 .message--right {
+  -ms-flex-item-align: start;
   align-self: flex-start;
 }
 
@@ -164,8 +173,15 @@ div.message::after {
 }
 
 .message--column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -173,14 +189,21 @@ div.message::after {
 .pagination {
   position: fixed;
   bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   z-index: 1;
   width: 100vw;
 }
 
-.physicalEducation .container .physicalEducation__intro .chat, .universityEmail .container .chat {
+.physicalEducation .container .physicalEducation__intro .chat, .golestan .container .golestan__mainElements .chat, .universityEmail .container .chat {
   width: 90%;
   min-width: 200px;
   justify-self: center;
@@ -452,7 +475,85 @@ div.message::after {
   background: #ececec;
 }
 .softwareBank .container {
-  /* put all of the styles here */
+  /* put all of the styles here :: joon baba */
+}
+.softwareBank .container .grid {
+  margin: 10px;
+  display: grid;
+  grid: auto/auto;
+  justify-content: center;
+  align-content: center;
+}
+@media screen and (min-width: 1080px) {
+  .softwareBank .container .grid {
+    grid: auto/auto auto auto;
+    margin: 5%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1080px) {
+  .softwareBank .container .grid {
+    grid: auto/auto auto;
+    margin: 5%;
+  }
+}
+.softwareBank .container .grid .message {
+  margin: 1em auto;
+}
+.softwareBank .container .grid .card:hover {
+  transform: rotate(1deg) scale(1.05);
+}
+.softwareBank .container .grid .card {
+  margin: 10px;
+  padding: 1em 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.softwareBank .container .grid .card a {
+  text-decoration: none;
+  color: lightgray;
+  font-weight: 500;
+}
+@media screen and (hover: hover) {
+  .softwareBank .container .grid .card a:hover {
+    color: #acacac;
+  }
+}
+.softwareBank .container .grid .card h1 {
+  font-weight: 500;
+  font-size: 36px;
+  text-align: center;
+  font-family: Rezvan, sans-serif;
+  transition: 0.5s;
+  margin: 10px 0;
+}
+.softwareBank .container .grid .card img {
+  transition: 0.5s;
+  max-width: 100%;
+  display: block;
+  padding: 5px;
+  margin: 0 auto;
+}
+.softwareBank .container .grid .card h1:hover, .softwareBank .container .grid .card img:hover {
+  transform: scale(1.05);
+}
+.softwareBank .container .grid .khu-portal {
+  background-color: #fbffb988;
+}
+.softwareBank .container .grid .khu-portal h1 {
+  color: #535353;
+}
+.softwareBank .container .grid .antivirus {
+  background-color: #f9e1ab88;
+}
+.softwareBank .container .grid .sbank {
+  background-color: #d5d9ff88;
+}
+.softwareBank .container .grid .sbank h1 {
+  color: #010892;
+  font-size: 52px;
+}
+.softwareBank .container .grid .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .golestan {
@@ -460,6 +561,152 @@ div.message::after {
 }
 .golestan .container {
   /* put all the styles here */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.golestan .container a {
+  text-decoration: none;
+  color: #1bb296;
+  font-weight: 500;
+}
+@media screen and (hover: hover) {
+  .golestan .container a:hover {
+    color: #116f5e;
+  }
+}
+.golestan .container .golestan__header {
+  width: 75%;
+  max-width: 180px;
+}
+.golestan .container .golestan__mainElements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 0;
+  width: 98%;
+  height: 100%;
+  max-width: 530px;
+}
+@media screen and (min-width: 700px) {
+  .golestan .container .golestan__mainElements {
+    max-width: unset;
+    flex-direction: row;
+  }
+}
+.golestan .container .golestan__mainElements .golestan__title {
+  margin: 2em 0;
+  color: #515151;
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 3em;
+  width: 100%;
+}
+@media screen and (min-width: 374px) {
+  .golestan .container .golestan__mainElements .golestan__title {
+    grid-template-columns: 47% 47%;
+    column-gap: 1.5em;
+  }
+}
+@media screen and (min-width: 425px) {
+  .golestan .container .golestan__mainElements .golestan__title {
+    column-gap: 1em;
+  }
+}
+@media screen and (min-width: 700px) {
+  .golestan .container .golestan__mainElements .golestan__title {
+    grid-template-columns: auto;
+    row-gap: 2.5em;
+    column-gap: unset;
+    margin: 0;
+    width: 50%;
+    max-width: 315px;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .golestan .container .golestan__mainElements .golestan__title {
+    row-gap: 1.75em;
+  }
+}
+.golestan .container .golestan__mainElements .golestan__title figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 374px) {
+  .golestan .container .golestan__mainElements .golestan__title figure {
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 700px) {
+  .golestan .container .golestan__mainElements .golestan__title figure {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+.golestan .container .golestan__mainElements .golestan__title figure embed {
+  width: 80px;
+  height: 80px;
+}
+@media screen and (min-width: 700px) {
+  .golestan .container .golestan__mainElements .golestan__title figure embed {
+    margin-left: 0.9em;
+  }
+}
+.golestan .container .golestan__mainElements .golestan__title figure figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1em;
+  height: 50%;
+}
+@media screen and (min-width: 700px) {
+  .golestan .container .golestan__mainElements .golestan__title figure figcaption {
+    align-items: flex-start;
+    height: 100%;
+  }
+}
+.golestan .container .golestan__mainElements .golestan__title figure figcaption a {
+  text-decoration: none;
+  color: #0e594b;
+  font-weight: 500;
+  font-weight: bold;
+}
+@media screen and (hover: hover) {
+  .golestan .container .golestan__mainElements .golestan__title figure figcaption a:hover {
+    color: #041713;
+  }
+}
+.golestan .container .golestan__mainElements .golestan__title figure figcaption h2 {
+  color: #654614;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0.2em 0;
+}
+.golestan .container .golestan__mainElements .golestan__title figure figcaption span {
+  font-size: 0.67em;
+}
+@media screen and (min-width: 374px) {
+  .golestan .container .golestan__mainElements .golestan__title figure figcaption {
+    font-size: 1em;
+  }
+  .golestan .container .golestan__mainElements .golestan__title figure figcaption h2 {
+    font-size: 1.1em;
+  }
+}
+@media screen and (min-width: 700px) {
+  .golestan .container .golestan__mainElements .chat {
+    width: 60%;
+    max-width: 500px;
+    margin-bottom: 0;
+  }
 }
 
 .library {

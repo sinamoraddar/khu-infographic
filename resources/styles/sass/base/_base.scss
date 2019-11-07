@@ -158,9 +158,11 @@ div.message::after {
   -ms-flex-pack: center;
   justify-content: space-evenly;
   z-index: 1;
-  width: 50%;
-  min-width: 260px;
-  max-width: 322px;
+  min-width: 270px;
+  max-width: 360px;
+  .pagination__button:nth-of-type(1) {
+    margin: 0 !important;
+  }
 }
 .pagination__button {
   -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 1);
@@ -168,8 +170,8 @@ div.message::after {
 
   width: 20px;
   height: 20px;
-  margin-right: 5px;
-  z-index: 1;
+  margin-right: 7px;
+  z-index: 10;
   border-radius: 50%;
   outline: none;
   cursor: pointer;
@@ -185,6 +187,10 @@ div.message::after {
   &:active {
     opacity: 0.95;
   }
+  @media screen and(min-width:450px) {
+    width: 20px;
+    height: 20px;
+  }
   @media screen and(hover:hover) {
     &:hover {
       opacity: 0.95;
@@ -197,6 +203,7 @@ div.message::after {
 .pagination__button--right,
 .pagination__button--left {
   position: fixed;
+  margin: 0;
   // display: flex;
   // justify-content: center;
   // align-items: center;

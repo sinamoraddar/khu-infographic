@@ -64,7 +64,7 @@ body {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   position: absolute;
-  padding: 1rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   left: 0;
   top: 0;
   width: 100%;
@@ -107,6 +107,39 @@ body {
 .slider:nth-child(11) {
   left: -1000%;
 }
+.slider:nth-child(1) .pagination .pagination__button:nth-of-type(1) {
+  opacity: 0.95;
+}
+.slider:nth-child(2) .pagination .pagination__button:nth-of-type(2) {
+  opacity: 0.95;
+}
+.slider:nth-child(3) .pagination .pagination__button:nth-of-type(3) {
+  opacity: 0.95;
+}
+.slider:nth-child(4) .pagination .pagination__button:nth-of-type(4) {
+  opacity: 0.95;
+}
+.slider:nth-child(5) .pagination .pagination__button:nth-of-type(5) {
+  opacity: 0.95;
+}
+.slider:nth-child(6) .pagination .pagination__button:nth-of-type(6) {
+  opacity: 0.95;
+}
+.slider:nth-child(7) .pagination .pagination__button:nth-of-type(7) {
+  opacity: 0.95;
+}
+.slider:nth-child(8) .pagination .pagination__button:nth-of-type(8) {
+  opacity: 0.95;
+}
+.slider:nth-child(9) .pagination .pagination__button:nth-of-type(9) {
+  opacity: 0.95;
+}
+.slider:nth-child(10) .pagination .pagination__button:nth-of-type(10) {
+  opacity: 0.95;
+}
+.slider:nth-child(11) .pagination .pagination__button:nth-of-type(11) {
+  opacity: 0.95;
+}
 
 /* we define a container class to 
 enable the min-height abbility
@@ -115,6 +148,7 @@ and also let the slider's overflow y work correctly
 .container {
   width: 100%;
   min-height: 100%;
+  position: relative;
 }
 
 .message {
@@ -187,8 +221,11 @@ div.message::after {
 
 /* pagination's styling */
 .pagination {
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: -1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,9 +235,95 @@ div.message::after {
   flex-direction: row;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
+  justify-content: space-evenly;
   z-index: 1;
-  width: 100vw;
+  width: 50%;
+  min-width: 260px;
+  max-width: 322px;
+}
+
+.pagination__button {
+  -webkit-box-shadow: 0px 0px 8px 0px black;
+  box-shadow: 0px 0px 8px 0px black;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  z-index: 1;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  background: white;
+  opacity: 0.4;
+  border: none;
+  -webkit-transition: opacity 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+.pagination__button:active {
+  opacity: 0.95;
+}
+@media screen and (hover: hover) {
+  .pagination__button:hover {
+    opacity: 0.95;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+.pagination__button--right,
+.pagination__button--left {
+  position: fixed;
+  top: 50%;
+  color: #444444;
+  width: 40px;
+  height: 40px;
+}
+@media screen and (min-width: 450px) {
+  .pagination__button--right,
+.pagination__button--left {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.pagination__button--right {
+  right: 0.5em;
+  display: none;
+}
+@media screen and (min-width: 450px) {
+  .pagination__button--right {
+    right: 1.9em;
+  }
+}
+@media screen and (min-width: 635px) {
+  .pagination__button--right {
+    right: 2.7em;
+  }
+}
+@media screen and (min-width: 860px) {
+  .pagination__button--right {
+    right: 3.7em;
+  }
+}
+
+.pagination__button--left {
+  left: 0.5em;
+}
+@media screen and (min-width: 450px) {
+  .pagination__button--left {
+    left: 1.9em;
+  }
+}
+@media screen and (min-width: 635px) {
+  .pagination__button--left {
+    left: 2.7em;
+  }
+}
+@media screen and (min-width: 860px) {
+  .pagination__button--left {
+    left: 3.7em;
+  }
 }
 
 .physicalEducation .container .physicalEducation__intro .chat, .golestan .container .golestan__mainElements .chat, .universityEmail .container .chat {

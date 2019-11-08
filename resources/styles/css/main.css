@@ -723,8 +723,18 @@ div.message::after {
 .mealAutomation {
   background: #f00038;
 }
-.mealAutomation .container {
-  /* put all the styles here */
+.mealAutomation .container .farayand .box {
+  background: url(/vendors/img/meal/line.png) no-repeat;
+  background-size: contain;
+  width: 556px;
+  height: 467px;
+  display: block;
+}
+@media screen and (max-width: 556px) {
+  .mealAutomation .container .farayand .box {
+    width: 100%;
+    height: 83.9928057554 vw;
+  }
 }
 
 .dormitory {

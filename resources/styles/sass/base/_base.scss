@@ -1,5 +1,6 @@
 /*slide template */
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "Vazir";
 }
@@ -23,21 +24,40 @@ body {
 }
 
 .slider {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   position: absolute;
-  padding: 1rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  transition: transform 1.3s ease;
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
   //we use sass' for loop to add a left postition to each slide
   //based on its number
   @for $i from 1 through 11 {
     &:nth-child(#{$i}) {
       left: ($i - 1) * -100%;
+    }
+  }
+
+  //change the style  of each page's corresponding pagination button
+  //whenever we're on that page
+  @for $i from 1 through 11 {
+    &:nth-child(#{$i}) {
+      .pagination {
+        .pagination__button:nth-of-type(#{$i}) {
+          opacity: 0.95;
+        }
+      }
     }
   }
 }
@@ -48,11 +68,16 @@ and also let the slider's overflow y work correctly
 .container {
   width: 100%;
   min-height: 100%;
+  position: relative;
 }
 
 //message's styling
 .message {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: #363535;
   font-size: 13px;
@@ -91,6 +116,7 @@ div.message::after {
   }
 }
 .message--right {
+  -ms-flex-item-align: start;
   align-self: flex-start;
 }
 .message--right::after {
@@ -102,19 +128,109 @@ div.message::after {
 
 //we align the items verticaly with this class
 .message--column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 /* pagination's styling */
 .pagination {
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: -1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: space-evenly;
   z-index: 1;
-  width: 100vw;
- 
+  width: 50%;
+  min-width: 260px;
+  max-width: 322px;
+}
+.pagination__button {
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 1);
+
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  z-index: 1;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  background: white;
+  opacity: 0.4;
+  border: none;
+  -webkit-transition: opacity 0.2s ease-in-out,
+    -webkit-transform 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out,
+    -webkit-transform 0.2s ease-in-out;
+  &:active {
+    opacity: 0.95;
+  }
+  @media screen and(hover:hover) {
+    &:hover {
+      opacity: 0.95;
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+}
+
+.pagination__button--right,
+.pagination__button--left {
+  position: fixed;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  top: 50%;
+  color: rgb(68, 68, 68);
+  width: 40px;
+  height: 40px;
+  @media screen and(min-width:450px) {
+    width: 60px;
+    height: 60px;
+  }
+}
+.pagination__button--right {
+  right: 0.5em;
+  display: none;
+  @media screen and(min-width:450px) {
+    right: 1.9em;
+  }
+  @media screen and(min-width:635px) {
+    right: 2.7em;
+  }
+  @media screen and(min-width:860px) {
+    right: 3.7em;
+  }
+}
+.pagination__button--left {
+  left: 0.5em;
+  @media screen and(min-width:450px) {
+    left: 1.9em;
+  }
+  @media screen and(min-width:635px) {
+    left: 2.7em;
+  }
+  @media screen and(min-width:860px) {
+    left: 3.7em;
+  }
 }

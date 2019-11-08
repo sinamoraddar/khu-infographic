@@ -15,7 +15,24 @@
       $(".slider").css("transform", `translateX(+${(position - 1) * 100}%)`);
       activeSlide = position;
     }
+
+    //show the pagination__right button if we're not on the
+    //first slide
+    if (activeSlide > 1) {
+      $(".pagination__button--right").css("display", "block");
+    } else {
+      $(".pagination__button--right").css("display", "none");
+    }
+
+    //show the pagination__left button if we're not on the
+    //last slide
+    if (activeSlide == totalSlides) {
+      $(".pagination__button--left").css("display", "none");
+    } else {
+      $(".pagination__button--left").css("display", "block");
+    }
   };
+
   //pagination buttons' and intro__goLeft's click events
   $(".pagination__button , .intro__goLeft").click(function() {
     slide($(this).val());
@@ -23,7 +40,7 @@
   //arrow key's event handler
   $(document).keydown(function(e) {
     switch (e.key) {
-      case " ":/* space bar's event */
+      case " ": /* space bar's event */
       case "ArrowLeft": {
         slide("left");
         break;

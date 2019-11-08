@@ -2,6 +2,7 @@
   background: $physicalEducationBackground;
 
   .container {
+    // position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,7 +52,7 @@
           color: $dormitoryBackground;
           font-size: 1.3rem;
           @media screen and(min-width:374px) {
-          font-size: 1.5rem;
+            font-size: 1.5rem;
           }
           @media screen and(min-width:780px) {
             font-size: 1.8rem;
@@ -85,5 +86,6 @@
         }
       }
     }
+
   }
 }

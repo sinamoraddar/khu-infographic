@@ -1,6 +1,19 @@
 .mealAutomation {
   background: $mealBackground;
   .container{
-    /* put all the styles here */
+    .farayand
+    .box{
+      background: url(/vendors/img/meal/line.png) no-repeat;
+      background-size: contain;
+      //height:auto;
+      //m-width: 100%;
+      width: 556px;
+      height: 467px;
+      display: block;
+      @media screen and (max-width:556px) {
+        width:100%;
+        height: (100*467/556)vw;
+      }
+    }
   }
 }

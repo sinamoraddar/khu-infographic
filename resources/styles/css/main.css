@@ -616,15 +616,9 @@ div.message::after {
   justify-content: center;
   align-content: center;
 }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 900px) {
   .softwareBank .container .grid {
     grid: auto/auto auto auto;
-    margin: 5%;
-  }
-}
-@media screen and (min-width: 600px) and (max-width: 1080px) {
-  .softwareBank .container .grid {
-    grid: auto/auto auto;
     margin: 5%;
   }
 }
@@ -677,12 +671,109 @@ div.message::after {
 .softwareBank .container .grid .antivirus {
   background-color: #f9e1ab88;
 }
+.softwareBank .container .grid .antivirus h3 {
+  text-align: center;
+  color: #535353;
+}
+.softwareBank .container .grid .antivirus h3 span {
+  font-weight: bold;
+  color: #104202;
+}
+.softwareBank .container .grid .antivirus .message a {
+  text-decoration: none;
+  color: #ca900e;
+  font-weight: 500;
+}
+@media screen and (hover: hover) {
+  .softwareBank .container .grid .antivirus .message a:hover {
+    color: #825d09;
+  }
+}
 .softwareBank .container .grid .sbank {
   background-color: #d5d9ff88;
+}
+.softwareBank .container .grid .sbank h3 {
+  color: #535353;
+  text-align: center;
 }
 .softwareBank .container .grid .sbank h1 {
   color: #010892;
   font-size: 52px;
+}
+.softwareBank .container .grid .pcsite {
+  background: #76ffaa88;
+}
+.softwareBank .container .grid .pcsite h1 {
+  font-size: 52px;
+  text-align: center;
+  margin-top: 0;
+}
+.softwareBank .container .grid .pcsite h3 {
+  text-align: center;
+  margin-bottom: 0;
+}
+.softwareBank .container .grid .fava {
+  background: #a3fafb88;
+}
+.softwareBank .container .grid .fava h2 {
+  font-weight: bold;
+  color: #123548;
+  text-align: center;
+}
+.softwareBank .container .grid .fava a {
+  text-decoration: none;
+  color: #09c7c9;
+  font-weight: 500;
+}
+@media screen and (hover: hover) {
+  .softwareBank .container .grid .fava a:hover {
+    color: #067f80;
+  }
+}
+.softwareBank .container .grid .office {
+  background: #ffe3df88;
+}
+.softwareBank .container .grid .office .toph3 {
+  margin-bottom: 0;
+}
+.softwareBank .container .grid .office .both3 {
+  margin-top: 0;
+}
+.softwareBank .container .grid .office h3 {
+  text-align: center;
+}
+.softwareBank .container .grid .office h3 span {
+  font-weight: bold;
+  color: #104202;
+}
+.softwareBank .container .grid .office a {
+  text-decoration: none;
+  color: #ff3113;
+  font-weight: 500;
+}
+@media screen and (hover: hover) {
+  .softwareBank .container .grid .office a:hover {
+    color: #c61900;
+  }
+}
+.softwareBank .container .grid .pazhohesh {
+  background: #d8d8da88;
+}
+.softwareBank .container .grid .pazhohesh h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 16px;
+  text-align: center;
+}
+.softwareBank .container .grid .pazhohesh a {
+  text-decoration: none;
+  color: #707076;
+  font-weight: 500;
+}
+@media screen and (hover: hover) {
+  .softwareBank .container .grid .pazhohesh a:hover {
+    color: #4b4b4f;
+  }
 }
 .softwareBank .container .grid .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -933,8 +1024,18 @@ div.message::after {
 .mealAutomation {
   background: #f00038;
 }
-.mealAutomation .container {
-  /* put all the styles here */
+.mealAutomation .container .farayand .box {
+  background: url(/vendors/img/meal/line.png) no-repeat;
+  background-size: contain;
+  width: 556px;
+  height: 467px;
+  display: block;
+}
+@media screen and (max-width: 556px) {
+  .mealAutomation .container .farayand .box {
+    width: 100%;
+    height: 83.9928057554 vw;
+  }
 }
 
 .dormitory {

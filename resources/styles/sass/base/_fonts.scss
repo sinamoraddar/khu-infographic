@@ -2,34 +2,34 @@
 
 @font-face {
   font-family: Vazir;
-  src: url("/resources/fonts/Vazir.eot");
-  src: url("/resources/fonts/Vazir.eot?#iefix") format("embedded-opentype"),
-    url("/resources/fonts/Vazir.woff") format("woff"),
-    url("/resources/fonts/Vazir.ttf") format("truetype");
+  src: url("./resources/fonts/Vazir.eot");
+  src: url("./resources/fonts/Vazir.eot?#iefix") format("embedded-opentype"),
+    url("./resources/fonts/Vazir.woff") format("woff"),
+    url("./resources/fonts/Vazir.ttf") format("truetype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: Vazir;
-  src: url("/resources/fonts/Vazir-Bold.eot");
-  src: url("/resources/fonts/Vazir-Bold.eot?#iefix") format("embedded-opentype"),
-    url("/resources/fonts/Vazir-Bold.woff") format("woff"),
-    url("/resources/fonts/Vazir-Bold.ttf") format("truetype");
+  src: url("./resources/fonts/Vazir-Bold.eot");
+  src: url("./resources/fonts/Vazir-Bold.eot?#iefix") format("embedded-opentype"),
+    url("./resources/fonts/Vazir-Bold.woff") format("woff"),
+    url("./resources/fonts/Vazir-Bold.ttf") format("truetype");
   font-weight: bold;
 }
 
 @font-face {
   font-family: Vazir;
-  src: url("/resources/fonts/Vazir-Light.eot");
-  src: url("/resources/fonts/Vazir-Light.eot?#iefix")
+  src: url("./resources/fonts/Vazir-Light.eot");
+  src: url("./resources/fonts/Vazir-Light.eot?#iefix")
       format("embedded-opentype"),
-    url("/resources/fonts/Vazir-Light.woff") format("woff"),
-    url("/resources/fonts/Vazir-Light.ttf") format("truetype");
+    url("./resources/fonts/Vazir-Light.woff") format("woff"),
+    url("./resources/fonts/Vazir-Light.ttf") format("truetype");
   font-weight: 300;
 }
 @font-face {
   font-family: Rezvan;
-  src: url("/resources/fonts/aRezvan-Fat.ttf") format("truetype");
+  src: url("./resources/fonts/aRezvan-Fat.ttf") format("truetype");
   // font-weight: 300;
 }
 div,
